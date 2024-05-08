@@ -5,33 +5,32 @@
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body>
-
-    <!-- ШАПКА САЙТА -->
     <header class="header">
       <div class="container">
-
-        <!-- ЛОГОТИП -->
-        <a href="#" class="logo"
+        <a class="logo"
           ><img
             class="logo__img"
             src="./img/logo-pic-mobile.svg"
             alt="логотип Кэт энерджи"
             width="33"
-            height="38"/>
-          <img class="logo__text" src="./img/logo-text.svg" alt=""
-        width="101"
-        height="18"/></a>
+            height="38" />
+          <img
+            class="logo__text"
+            src="./img/logo-text.svg"
+            alt=""
+            width="101"
+            height="18"
+        /></a>
 
-        <!-- НАВИГАЦИЯ -->
         <nav class="site-navigation">
           <ul class="site-navigation__list">
             <li class="site-navigation__item">
-              <a href="#" class="site-navigation__link site-navigation__link--current">главная</a>
+              <a class="site-navigation__link site-navigation__link--current"
+                >главная</a
+              >
             </li>
             <li class="site-navigation__item">
-              <a
-                href="./catalog.html"
-                class="site-navigation__link"
+              <a href="./catalog.html" class="site-navigation__link"
                 >каталог продукции</a
               >
             </li>
@@ -50,26 +49,25 @@
       </div>
     </header>
 
-    <!-- ОСНОВНОЕ СОДЕРЖИМОЕ -->
     <main class="main">
-
-      <!-- ПРОМО-БЛОК -->
       <section class="hero">
         <div class="container">
           <h1 class="title">Функциональное питание для котов</h1>
           <p class="hero__slogan">Занялся собой? Займись котом!</p>
-          <img
-            src="./img/index-can-mobile.png"
-            alt="Еда для кота Cat Energy Pro с курицей"
-            class="hero__image"
-            width="280"
-            height="270"
-          />
+          <picture>
+            <img
+              src="./img/index-can-mobile.png"
+              alt="Еда для кота Cat Energy Pro с курицей"
+              class="hero__image"
+              width="280"
+              height="270"
+            />
+          </picture>
+
           <button class="button" type="button">подобрать программу</button>
         </div>
       </section>
 
-      <!-- ПРОГРАММЫ ПИТАНИЯ -->
       <section class="programs">
         <div class="container">
           <h2 class="visually-hidden">Программы питания</h2>
@@ -81,7 +79,7 @@
                 по деревьям? Пора на диету! Cat Energy Slim поможет вашему
                 питомцу сбросить лишний вес.
               </p>
-              <a href="" class="programs__card-link">каталог slim</a>
+              <a href="#" class="programs__card-link">каталог slim</a>
             </li>
             <li class="programs__card">
               <h3 class="programs__card-title">Набор массы</h3>
@@ -89,13 +87,12 @@
                 Заработать авторитет среди дворовых котов и даже собак? Серия
                 Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
               </p>
-              <a href="" class="programs__card-link">каталог pro</a>
+              <a href="#" class="programs__card-link">каталог pro</a>
             </li>
           </ul>
         </div>
       </section>
 
-      <!-- ЭТАПЫ -->
       <section class="steps">
         <div class="container">
           <h2 class="title">Как это работает</h2>
@@ -128,7 +125,6 @@
         </div>
       </section>
 
-      <!-- ПРИМЕР ИЗ ЖИЗНИ -->
       <section class="example">
         <div class="container">
           <h2 class="title">Живой пример</h2>
@@ -149,22 +145,25 @@
             </div>
           </dl>
           <p class="example__spendings">Затраты на питание: 15 000 РУБ.</p>
-          <img
-            src="./img/compare-pic-mobile.png"
-            alt="Пример похудения"
-            class="example__image"
-            width="280"
-            height="256"
-          />
-          <button class="example__toggle" aria-label="передвинуть слайд"></button>
+          <picture>
+            <img
+              src="./img/compare-pic-mobile.png"
+              alt="Пример похудения"
+              class="example__image"
+              width="280"
+              height="256"
+            />
+          </picture>
+
+          <button
+            class="example__toggle"
+            aria-label="передвинуть слайд"
+          ></button>
         </div>
       </section>
     </main>
 
-    <!-- ПОДВАЛ САЙТА -->
     <footer class="footer">
-
-      <!-- КОНТАКТЫ -->
       <section class="contacts">
         <div class="container">
           <h2 class="visually-hidden">Наши контакты</h2>
@@ -172,20 +171,22 @@
           <p class="contacts__address">
             ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
           </p>
-          <img
-            src="./img/location-map-mobile.jpg"
-            alt="местоположение офиса на карте"
-            class="contacts__map"
-            width="320"
-            height="362"
-          />
+          <picture
+            ><img
+              src="./img/location-map-mobile.jpg"
+              alt="местоположение офиса на карте"
+              class="contacts__map"
+              width="320"
+              height="362"
+          /></picture>
         </div>
       </section>
 
-      <!-- КОПИРАЙТ -->
       <section class="copyright">
-        <a href="" class="logo"
-          ><img
+        <a class="logo"
+          >
+          
+          <img
             src="./img/logo-text.svg"
             alt="Логотип Кэт энерджи"
             class="logo__text"
@@ -194,23 +195,28 @@
         /></a>
         <ul class="socials">
           <li class="social__item">
-            <a href="" class="social__link" aria-label="Вконтакте"></a>
+            <a href="#" class="social__link" aria-label="Вконтакте"></a>
           </li>
           <li class="social__item">
-            <a href="" class="social__link" aria-label="Ютуб"></a>
+            <a href="#" class="social__link" aria-label="Ютуб"></a>
           </li>
           <li class="social__item">
-            <a href="" class="social__link" aria-label="Телеграм"></a>
+            <a href="#" class="social__link" aria-label="Телеграм"></a>
           </li>
         </ul>
-        <p class="copyright__text">HTML Academy</p>
-        <img
-          src="./img/logo-htmlacademy.svg"
-          alt="Лого HTML Академия"
-          class="copyright__logo"
-          width="47"
-          height="34"
-        />
+        <a
+          class="copyright__link"
+          href="https://htmlacademy.ru/intensive/adaptive"
+        >
+          <span class="copyright__text">HTML Academy</span>
+          <img
+            src="./img/logo-htmlacademy.svg"
+            alt="Лого HTML Академия"
+            class="copyright__logo"
+            width="47"
+            height="34"
+          />
+        </a>
       </section>
     </footer>
   </body>

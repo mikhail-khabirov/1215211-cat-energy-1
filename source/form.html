@@ -5,13 +5,9 @@
     <title>HTML Academy: Кэт энерджи | Подбор программы</title>
   </head>
   <body>
-
-    <!-- ШАПКА САЙТА -->
     <header class="header">
       <div class="container">
-
-        <!-- ЛОГО -->
-        <a href="#" class="logo"
+        <a href="./index.html" class="logo"
           ><img
             class="logo__img"
             src="./img/logo-pic-mobile.svg"
@@ -26,7 +22,6 @@
             height="18"
         /></a>
 
-        <!-- НАВИГАЦИЯ -->
         <nav class="site-navigation">
           <ul class="site-navigation__list">
             <li class="site-navigation__item">
@@ -38,9 +33,7 @@
               >
             </li>
             <li class="site-navigation__item">
-              <a
-                href="#"
-                class="site-navigation__link site-navigation__link--current"
+              <a class="site-navigation__link site-navigation__link--current"
                 >подбор программы</a
               >
             </li>
@@ -54,11 +47,8 @@
       </div>
     </header>
 
-    <!-- ОСНОВНОЕ СОДЕРЖИМОЕ -->
     <main class="main">
       <div class="container">
-
-        <!-- ФОРМА -->
         <section class="form">
           <h1 class="title">Подбор программы</h1>
           <p class="form__slogan">
@@ -220,10 +210,7 @@
       </div>
     </main>
 
-    <!-- ПОДВАЛ САЙТА -->
     <footer class="footer">
-
-      <!-- КОНТАКТЫ -->
       <section class="contacts">
         <div class="container">
           <h2 class="visually-hidden">Наши контакты</h2>
@@ -231,19 +218,21 @@
           <p class="contacts__address">
             ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
           </p>
-          <img
+          <picture>
+            <img
             src="./img/location-map-mobile.jpg"
             alt="местоположение офиса на карте"
             class="contacts__map"
             width="320"
             height="362"
           />
+          </picture>
+
         </div>
       </section>
 
-      <!-- КОПИРАЙТ -->
       <section class="copyright">
-        <a href="" class="logo"
+        <a href="./index.html" class="logo"
           ><img
             src="./img/logo-text.svg"
             alt="Логотип Кэт энерджи"
@@ -253,23 +242,28 @@
         /></a>
         <ul class="socials">
           <li class="social__item">
-            <a href="" class="social__link" aria-label="Вконтакте"></a>
+            <a href="#" class="social__link" aria-label="Вконтакте"></a>
           </li>
           <li class="social__item">
-            <a href="" class="social__link" aria-label="Ютуб"></a>
+            <a href="#" class="social__link" aria-label="Ютуб"></a>
           </li>
           <li class="social__item">
-            <a href="" class="social__link" aria-label="Телеграм"></a>
+            <a href="#" class="social__link" aria-label="Телеграм"></a>
           </li>
         </ul>
-        <p class="copyright__text">HTML Academy</p>
-        <img
-          src="./img/logo-htmlacademy.svg"
-          alt="Лого HTML Академия"
-          class="copyright__logo"
-          width="47"
-          height="34"
-        />
+        <a
+          class="copyright__link"
+          href="https://htmlacademy.ru/intensive/adaptive"
+        >
+          <span class="copyright__text">HTML Academy</span>
+          <img
+            src="./img/logo-htmlacademy.svg"
+            alt="Лого HTML Академия"
+            class="copyright__logo"
+            width="47"
+            height="34"
+          />
+        </a>
       </section>
     </footer>
   </body>
