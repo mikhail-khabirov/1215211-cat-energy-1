@@ -1,0 +1,26 @@
+.hero__wrapper {
+
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/cat-background.jpg");
+}
+
+.hero__title {
+  margin: 0 auto;
+  padding-top: 27px;
+  margin-bottom: 25px;
+  text-align: center;
+  width: 250px;
+}
+
+.hero__slogan {
+  margin: 0 auto;
+  padding-bottom: 164px;
+  width: 198px;
+  font-family: $second-family;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+}
+
+.hero__button {
+  margin-bottom: 20px;
+}

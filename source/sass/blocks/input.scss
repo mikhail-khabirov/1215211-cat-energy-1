@@ -1,0 +1,52 @@
+.input {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-family: $second-family;
+}
+
+.input__label {
+  font-size: 16px;
+  line-height: 1.12;
+  text-transform: uppercase;
+  color: $special-dark-grey;
+}
+
+.input__field {
+  font-family: $second-family;
+  font-size: 16px;
+  line-height: 1.12;
+  text-transform: uppercase;
+  color: $special-dark-grey;
+  padding: 13px 15px 13px;
+  border: 1px solid #e7e7e7;
+  flex-grow: 1;
+}
+
+.input__label--about-cat {
+  margin-right: 13px;
+}
+
+.input__label--program {
+  margin-left: 15px;
+}
+
+.input__label--contact {
+  margin-right: 13px;
+}
+
+.input__label--add {
+  margin-left: 15px;
+}
+
+.input__text--comment {
+  border: 1px solid #e7e7e7;
+  resize: none;
+  min-height: 150px;
+  padding: 13px;
+  font-family: $second-family;
+  font-size: 16px;
+  line-height: 1.12;
+  text-transform: uppercase;
+  color: $special-dark-grey;
+}
