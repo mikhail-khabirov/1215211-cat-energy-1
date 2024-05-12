@@ -1,7 +1,7 @@
 .contacts__wrapper {
   padding: 26px 20px;
   display: flex;
-  margin: 0 auto;
+  justify-content: space-between;
 }
 
 .contacts__wrapper--change-background {
@@ -23,4 +23,13 @@
   margin: 0;
   line-height: 1.43;
   color: $special-dark-grey;
+}
+
+.contacts__picture-wrapper {
+  display: flex;
+}
+
+.contacts__map {
+  flex-grow: 1;
+  object-fit: cover;
 }

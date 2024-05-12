@@ -45,3 +45,13 @@
   text-transform: uppercase;
   margin: 0 0 20px;
 }
+
+.example__picture-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.example__toggle {
+  margin: 0 auto;
+  display: block;
+}

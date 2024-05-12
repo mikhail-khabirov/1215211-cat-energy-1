@@ -13,6 +13,10 @@
 
 .extra-goods__list {
   @include list-reset();
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 10px;
   margin-bottom: 32px;
 }
 
@@ -43,10 +47,11 @@
 }
 
 .extra-goods__present {
-  width: 280px;
   min-height: 290px;
   margin: 0 auto;
-  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/cat-background-catalog.jpg");
+  background-image: url("../../img/cat-background-catalog.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .extra-goods__text {
