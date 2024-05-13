@@ -1,12 +1,21 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- favicons -->
+    <link rel="icon" href="../favicon.ico" />
+    <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon.png" />
+    <link rel="manifest" href="../manifest.webmanifest" />
+    <!-- styles -->
+    <link rel="stylesheet" href="./css/style.css" />
     <title>HTML Academy: Кэт энерджи</title>
   </head>
-  <body>
+  <body class="page__body">
     <header class="header">
-      <div class="container">
+      <div class="header__container container">
         <a class="logo"
           ><img
             class="logo__img"
@@ -51,8 +60,10 @@
 
     <main class="main">
       <section class="hero">
-        <div class="container">
-          <h1 class="title">Функциональное питание для котов</h1>
+        <div class="hero__wrapper container">
+          <h1 class="hero__title title title--hero">
+            Функциональное питание для котов
+          </h1>
           <p class="hero__slogan">Занялся собой? Займись котом!</p>
           <picture>
             <img
@@ -64,7 +75,13 @@
             />
           </picture>
 
-          <button class="button" type="button">подобрать программу</button>
+          <button class="hero__button button" type="button">
+            подобрать программу
+          </button>
+        </div>
+
+        <div class="hero__container container">
+
         </div>
       </section>
 
@@ -95,7 +112,7 @@
 
       <section class="steps">
         <div class="container">
-          <h2 class="title">Как это работает</h2>
+          <h2 class="steps__title title">Как это работает</h2>
           <ul class="steps__list">
             <li class="steps__item">
               <p class="steps__text">
@@ -126,26 +143,26 @@
       </section>
 
       <section class="example">
-        <div class="container">
-          <h2 class="title">Живой пример</h2>
-          <p class="example__description">
+        <div class="example__container container">
+          <h2 class="example__title title">Живой пример</h2>
+          <p class="example__case">
             Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на
             Cat Energy Slim. Отличный результат без изнуряющих тренировок! При
             этом он не менял своих привычек и по-прежнему спит по 16 часов в
             день.
           </p>
-          <dl class="description">
-            <div class="description__item">
-              <dt class="description__term">5 КГ</dt>
-              <dd class="description__meaning">снижение веса</dd>
+          <dl class="example__desc">
+            <div class="example__desc-item">
+              <dt class="example__desc-term">5 КГ</dt>
+              <dd class="example__desc-meaning">снижение веса</dd>
             </div>
-            <div class="description__item">
-              <dt class="description__term">60 ДНЕЙ</dt>
-              <dd class="description__meaning">затрачено времени</dd>
+            <div class="example__desc-item">
+              <dt class="example__desc-term">60 ДНЕЙ</dt>
+              <dd class="example__desc-meaning">затрачено времени</dd>
             </div>
           </dl>
           <p class="example__spendings">Затраты на питание: 15 000 РУБ.</p>
-          <picture>
+          <picture class="example__picture-wrapper">
             <img
               src="./img/compare-pic-mobile.png"
               alt="Пример похудения"
@@ -164,14 +181,15 @@
     </main>
 
     <footer class="footer">
-      <section class="contacts">
-        <div class="container">
-          <h2 class="visually-hidden">Наши контакты</h2>
-          <p class="contacts__title">приглашаем к сотрудничеству дилеров!</p>
-          <p class="contacts__address">
-            ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
-          </p>
-          <picture
+        <section class="contacts">
+          <div class="contacts__wrapper">
+            <h2 class="visually-hidden">Наши контакты</h2>
+            <p class="contacts__title">приглашаем к сотрудничеству дилеров!</p>
+            <p class="contacts__address">
+              ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+            </p>
+          </div>
+          <picture class="contacts__picture-wrapper"
             ><img
               src="./img/location-map-mobile.jpg"
               alt="местоположение офиса на карте"
@@ -179,45 +197,48 @@
               width="320"
               height="362"
           /></picture>
-        </div>
-      </section>
+        </section>
 
-      <section class="copyright">
-        <a class="logo"
-          >
-          
-          <img
-            src="./img/logo-text.svg"
-            alt="Логотип Кэт энерджи"
-            class="logo__text"
-            width="128"
-            height="24"
-        /></a>
-        <ul class="socials">
-          <li class="social__item">
-            <a href="#" class="social__link" aria-label="Вконтакте"></a>
-          </li>
-          <li class="social__item">
-            <a href="#" class="social__link" aria-label="Ютуб"></a>
-          </li>
-          <li class="social__item">
-            <a href="#" class="social__link" aria-label="Телеграм"></a>
-          </li>
-        </ul>
-        <a
-          class="copyright__link"
-          href="https://htmlacademy.ru/intensive/adaptive"
-        >
-          <span class="copyright__text">HTML Academy</span>
-          <img
-            src="./img/logo-htmlacademy.svg"
-            alt="Лого HTML Академия"
-            class="copyright__logo"
-            width="47"
-            height="34"
-          />
-        </a>
-      </section>
+          <section class="copyright">
+            <div class="copyright__wrapper container">
+              <a class="copyright__logo logo">
+                <img
+                  src="./img/logo-text.svg"
+                  alt="Логотип Кэт энерджи"
+                  class="logo__text"
+                  width="128"
+                  height="24"
+              /></a>
+              <ul class="copyright__socials socials">
+                <li class="social__item">
+                  <a href="#" class="social__link" aria-label="Вконтакте"></a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link" aria-label="Ютуб"></a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link" aria-label="Телеграм"></a>
+                </li>
+              </ul>
+              <a
+                class="copyright__link"
+                href="https://htmlacademy.ru/intensive/adaptive"
+              >
+                <span class="copyright__text">HTML Academy</span>
+                <img
+                  src="./img/logo-htmlacademy.svg"
+                  alt="Лого HTML Академия"
+                  class="copyright__academy"
+                  width="47"
+                  height="34"
+                />
+              </a>
+            </div>
+
+          </section>
+
+
+
     </footer>
   </body>
 </html>

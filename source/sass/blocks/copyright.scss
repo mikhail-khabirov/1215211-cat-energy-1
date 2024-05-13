@@ -1,0 +1,32 @@
+.copyright__wrapper {
+  background-color: $basic-grey;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.copyright__logo {
+  margin-bottom: 20px;
+}
+
+.copyright__socials {
+  margin-bottom: 20px;
+}
+
+.copyright__link {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+}
+
+.copyright__text {
+  font-size: 16px;
+  line-height: 1.25;
+  color: $special-dark-grey;
+  text-decoration: none;
+}

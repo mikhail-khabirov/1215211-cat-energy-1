@@ -1,0 +1,55 @@
+.cards {
+  @include list-reset();
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 10px;
+}
+
+.cards__item {
+  padding-top: 20px;
+  padding-bottom: 25px;
+}
+
+.cards__wrapper {
+  display: flex;
+  align-items: start;
+  margin-bottom: 17px;
+}
+
+.cards__image {
+  max-width: 140px;
+  height: 107px;
+}
+
+.cards__title {
+  font-family: $second-family;
+  margin: 0 0 14px;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $special-dark-grey-2;
+  width: 95px;
+}
+
+.cards__description {
+  margin: 0;
+  width: 140px;
+}
+
+.cards__description-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards__term,
+.cards__meaning {
+  font-size: 12px;
+  line-height: 1.33;
+  color: $special-dark-grey;
+}
+
+.cards__meaning {
+  margin: 0;
+}

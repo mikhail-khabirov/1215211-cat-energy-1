@@ -1,0 +1,57 @@
+.example__container {
+  background-color: #eaeaea;
+  padding: 25px 20px 40px;
+}
+
+.example__title {
+  line-height: 1.11;
+  margin-bottom: 40px;
+}
+
+.example__case {
+  line-height: 1.29;
+  color: $special-dark-grey;
+  margin: 0 0 20px;
+}
+
+.example__desc {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 20px;
+}
+
+.example__desc-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.example__desc-term {
+  font-family: $second-family;
+  font-size: 24px;
+}
+
+.example__desc-meaning {
+  margin: 0;
+  font-size: 12px;
+  font-family: $font-family;
+}
+
+.example__spendings {
+  font-family: $second-family;
+  text-align: center;
+  line-height: 1.43;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+}
+
+.example__picture-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.example__toggle {
+  margin: 0 auto;
+  display: block;
+}

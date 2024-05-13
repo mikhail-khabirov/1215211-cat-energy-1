@@ -1,0 +1,35 @@
+.contacts__wrapper {
+  padding: 26px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts__wrapper--change-background {
+  background-color: $basic-grey;
+}
+
+.contacts__title {
+  font-family: $second-family;
+  width: 140px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  color: #111111;
+}
+
+.contacts__address {
+  width: 140px;
+  margin: 0;
+  line-height: 1.43;
+  color: $special-dark-grey;
+}
+
+.contacts__picture-wrapper {
+  display: flex;
+}
+
+.contacts__map {
+  flex-grow: 1;
+  object-fit: cover;
+}

@@ -1,12 +1,21 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- favicons -->
+    <link rel="icon" href="../favicon.ico" />
+    <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon.png" />
+    <link rel="manifest" href="../manifest.webmanifest" />
+    <!-- styles -->
+    <link rel="stylesheet" href="./css/style.css" />
     <title>HTML Academy: Кэт энерджи | Каталог продукции</title>
   </head>
-  <body>
+  <body class="page__body">
     <header class="header">
-      <div class="container">
+      <div class="header__container container">
         <a href="./index.html" class="logo"
           ><img
             class="logo__img"
@@ -50,10 +59,10 @@
     <main class="main">
       <section class="catalog">
         <div class="container">
-          <h1 class="title">Каталог продукции</h1>
+          <h1 class="catalog__title title">Каталог продукции</h1>
           <ul class="cards">
             <li class="cards__item">
-              <div>
+              <div class="cards__wrapper">
                 <picture>
                   <img
                     src="./img/cat-food/cat-food-500-chicken.png"
@@ -67,17 +76,17 @@
                 <div>
                   <h2 class="cards__title">Cat Energy PRO 500 г</h2>
                   <dl class="cards__description">
-                    <div>
+                    <div class="cards__description-wrapper">
                       <dt class="cards__term">Масса</dt>
-                      <dd class="cards__meaing">500 г</dd>
+                      <dd class="cards__meaning">500 г</dd>
                     </div>
-                    <div>
+                    <div class="cards__description-wrapper">
                       <dt class="cards__term">Вкус</dt>
-                      <dd class="cards__meaing">Курица</dd>
+                      <dd class="cards__meaning">Курица</dd>
                     </div>
-                    <div>
+                    <div class="cards__description-wrapper">
                       <dt class="cards__term">Цена</dt>
-                      <dd class="cards__meaing">700 ₽</dd>
+                      <dd class="cards__meaning">700 ₽</dd>
                     </div>
                   </dl>
                 </div>
@@ -85,7 +94,7 @@
               <button class="button" type="button">заказать</button>
             </li>
             <li class="cards__item">
-              <div>
+              <div class="cards__wrapper">
                 <picture>
                   <img
                     src="./img/cat-food/cat-food-1000-chicken.png"
@@ -99,17 +108,17 @@
                 <div>
                   <h2 class="cards__title">Cat Energy PRO 1000 г</h2>
                   <dl class="cards__description">
-                    <div>
+                    <div class="cards__description-wrapper">
                       <dt class="cards__term">Масса</dt>
-                      <dd class="cards__meaing">1000 г</dd>
+                      <dd class="cards__meaning">1000 г</dd>
                     </div>
-                    <div>
+                    <div class="cards__description-wrapper">
                       <dt class="cards__term">Вкус</dt>
-                      <dd class="cards__meaing">Курица</dd>
+                      <dd class="cards__meaning">Курица</dd>
                     </div>
-                    <div>
+                    <div class="cards__description-wrapper">
                       <dt class="cards__term">Цена</dt>
-                      <dd class="cards__meaing">1000 ₽</dd>
+                      <dd class="cards__meaning">1000 ₽</dd>
                     </div>
                   </dl>
                 </div>
@@ -117,7 +126,7 @@
               <button class="button" type="button">заказать</button>
             </li>
             <li class="cards__item">
-              <div>
+              <div class="cards__wrapper">
                 <picture>
                   <img
                     src="./img/cat-food/cat-food-500-fish.png"
@@ -131,17 +140,17 @@
                 <div>
                   <h2 class="cards__title">Cat Energy PRO 500 г</h2>
                   <dl class="cards__description">
-                    <div>
+                    <div class="cards__description-wrapper">
                       <dt class="cards__term">Масса</dt>
-                      <dd class="cards__meaing">500 г</dd>
+                      <dd class="cards__meaning">500 г</dd>
                     </div>
-                    <div>
+                    <div class="cards__description-wrapper">
                       <dt class="cards__term">Вкус</dt>
-                      <dd class="cards__meaing">Рыба</dd>
+                      <dd class="cards__meaning">Рыба</dd>
                     </div>
-                    <div>
+                    <div class="cards__description-wrapper">
                       <dt class="cards__term">Цена</dt>
-                      <dd class="cards__meaing">700 ₽</dd>
+                      <dd class="cards__meaning">700 ₽</dd>
                     </div>
                   </dl>
                 </div>
@@ -149,7 +158,7 @@
               <button class="button" type="button">заказать</button>
             </li>
             <li class="cards__item">
-              <div>
+              <div class="cards__wrapper">
                 <picture>
                   <img
                     src="./img/cat-food/cat-food-1000-fish.png"
@@ -163,17 +172,17 @@
                 <div>
                   <h2 class="cards__title">Cat Energy PRO 1000 г</h2>
                   <dl class="cards__description">
-                    <div>
+                    <div class="cards__description-wrapper">
                       <dt class="cards__term">Масса</dt>
-                      <dd class="cards__meaing">1000 г</dd>
+                      <dd class="cards__meaning">1000 г</dd>
                     </div>
-                    <div>
+                    <div class="cards__description-wrapper">
                       <dt class="cards__term">Вкус</dt>
-                      <dd class="cards__meaing">Рыба</dd>
+                      <dd class="cards__meaning">Рыба</dd>
                     </div>
-                    <div>
+                    <div class="cards__description-wrapper">
                       <dt class="cards__term">Цена</dt>
-                      <dd class="cards__meaing">1000 ₽</dd>
+                      <dd class="cards__meaning">1000 ₽</dd>
                     </div>
                   </dl>
                 </div>
@@ -181,7 +190,7 @@
               <button class="button" type="button">заказать</button>
             </li>
             <li class="cards__item">
-              <div>
+              <div class="cards__wrapper">
                 <picture>
                   <img
                     src="./img/cat-food/cat-food-500-buckwheat.png"
@@ -195,17 +204,17 @@
                 <div>
                   <h2 class="cards__title">Cat Energy sLIM 500 г</h2>
                   <dl class="cards__description">
-                    <div>
+                    <div class="cards__description-wrapper">
                       <dt class="cards__term">Масса</dt>
-                      <dd class="cards__meaing">500 г</dd>
+                      <dd class="cards__meaning">500 г</dd>
                     </div>
-                    <div>
+                    <div class="cards__description-wrapper">
                       <dt class="cards__term">Вкус</dt>
-                      <dd class="cards__meaing">Гречка</dd>
+                      <dd class="cards__meaning">Гречка</dd>
                     </div>
-                    <div>
+                    <div class="cards__description-wrapper">
                       <dt class="cards__term">Цена</dt>
-                      <dd class="cards__meaing">400 ₽</dd>
+                      <dd class="cards__meaning">400 ₽</dd>
                     </div>
                   </dl>
                 </div>
@@ -213,7 +222,7 @@
               <button class="button" type="button">заказать</button>
             </li>
             <li class="cards__item">
-              <div>
+              <div class="cards__wrapper">
                 <picture>
                   <img
                     src="./img/cat-food/cat-food-1000-buckwheat.png"
@@ -227,17 +236,17 @@
                 <div>
                   <h2 class="cards__title">Cat Energy SLIM 1000 г</h2>
                   <dl class="cards__description">
-                    <div>
+                    <div class="cards__description-wrapper">
                       <dt class="cards__term">Масса</dt>
-                      <dd class="cards__meaing">1000 г</dd>
+                      <dd class="cards__meaning">1000 г</dd>
                     </div>
-                    <div>
+                    <div class="cards__description-wrapper">
                       <dt class="cards__term">Вкус</dt>
-                      <dd class="cards__meaing">Гречка</dd>
+                      <dd class="cards__meaning">Гречка</dd>
                     </div>
-                    <div>
+                    <div class="cards__description-wrapper">
                       <dt class="cards__term">Цена</dt>
-                      <dd class="cards__meaing">700 ₽</dd>
+                      <dd class="cards__meaning">700 ₽</dd>
                     </div>
                   </dl>
                 </div>
@@ -245,7 +254,7 @@
               <button class="button" type="button">заказать</button>
             </li>
             <li class="cards__item">
-              <div>
+              <div class="cards__wrapper">
                 <picture
                   ><img
                     src="./img/cat-food/cat-food-slim-500.png"
@@ -258,17 +267,17 @@
                 <div>
                   <h2 class="cards__title">Cat Energy slim 500 г</h2>
                   <dl class="cards__description">
-                    <div>
+                    <div class="cards__description-wrapper">
                       <dt class="cards__term">Масса</dt>
-                      <dd class="cards__meaing">500 г</dd>
+                      <dd class="cards__meaning">500 г</dd>
                     </div>
-                    <div>
+                    <div class="cards__description-wrapper">
                       <dt class="cards__term">Вкус</dt>
-                      <dd class="cards__meaing">Рис</dd>
+                      <dd class="cards__meaning">Рис</dd>
                     </div>
-                    <div>
+                    <div class="cards__description-wrapper">
                       <dt class="cards__term">Цена</dt>
-                      <dd class="cards__meaing">500 ₽</dd>
+                      <dd class="cards__meaning">500 ₽</dd>
                     </div>
                   </dl>
                 </div>
@@ -280,7 +289,7 @@
           <p class="catalog__secondary-text">
             На самом деле вкусов гораздо больше!
           </p>
-          <button class="button button--show-all" type="button">
+          <button class="button button--show-all catalog__button " type="button">
             показать все
           </button>
         </div>
@@ -289,39 +298,39 @@
       <section class="extra-goods">
         <div class="container">
           <h2 class="extra-goods__title">Дополнительные товары</h2>
-          <ul class="cards">
-            <li class="cards__item">
-              <h3 class="cards__title">Сахарозаменитель</h3>
-              <dl class="cards__description">
-                <dt class="cards__term">1 упаковка (100 г)</dt>
-                <dd class="cards__meaing">200 ₽</dd>
+          <ul class="extra-goods__list">
+            <li class="extra-goods__item">
+              <h3 class="extra-goods__item-title">Сахарозаменитель</h3>
+              <dl class="extra-goods__description">
+                <dt class="extra-goods__term">1 упаковка (100 г)</dt>
+                <dd class="extra-goods__meaning">200 ₽</dd>
               </dl>
 
               <button class="button" type="button">заказать</button>
             </li>
-            <li class="cards__item">
-              <h3 class="cards__title">питьевая вода</h3>
-              <dl class="cards__description">
-                <dt class="cards__term">5 литров</dt>
-                <dd class="cards__meaing">50 ₽</dd>
+            <li class="extra-goods__item">
+              <h3 class="extra-goods__item-title">питьевая вода</h3>
+              <dl class="extra-goods__description">
+                <dt class="extra-goods__term">5 литров</dt>
+                <dd class="extra-goods__meaning">50 ₽</dd>
               </dl>
 
               <button class="button" type="button">заказать</button>
             </li>
-            <li class="cards__item">
-              <h3 class="cards__title">молоко</h3>
-              <dl class="cards__description">
-                <dt class="cards__term">1 литр</dt>
-                <dd class="cards__meaing">100 ₽</dd>
+            <li class="extra-goods__item">
+              <h3 class="extra-goods__item-title">молоко</h3>
+              <dl class="extra-goods__description">
+                <dt class="extra-goods__term">1 литр</dt>
+                <dd class="extra-goods__meaning">100 ₽</dd>
               </dl>
 
               <button class="button" type="button">заказать</button>
             </li>
-            <li class="cards__item">
-              <h3 class="cards__title">витамины</h3>
-              <dl class="cards__description">
-                <dt class="cards__term">1 упаковка (30 г)</dt>
-                <dd class="cards__meaing">300 ₽</dd>
+            <li class="extra-goods__item">
+              <h3 class="extra-goods__item-title">витамины</h3>
+              <dl class="extra-goods__description">
+                <dt class="extra-goods__term">1 упаковка (30 г)</dt>
+                <dd class="extra-goodss__meaning">300 ₽</dd>
               </dl>
 
               <button class="button" type="button">заказать</button>
@@ -329,7 +338,7 @@
           </ul>
           <div class="extra-goods__present">
             <p class="extra-goods__text">
-              Закажите все и получите чехол для кота в подарок!
+              Закажите все <br> и получите чехол для кота в подарок!
             </p>
           </div>
         </div>
@@ -337,14 +346,15 @@
     </main>
 
     <footer class="footer">
-      <section class="contacts">
-        <div class="container">
-          <h2 class="visually-hidden">Наши контакты</h2>
-          <p class="contacts__title">приглашаем к сотрудничеству дилеров!</p>
-          <p class="contacts__address">
-            ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
-          </p>
-          <picture
+        <section class="contacts">
+          <div class="contacts__wrapper contacts__wrapper--change-background">
+            <h2 class="visually-hidden">Наши контакты</h2>
+            <p class="contacts__title">приглашаем к сотрудничеству дилеров!</p>
+            <p class="contacts__address">
+              ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+            </p>
+          </div>
+          <picture class="contacts__picture-wrapper"
             ><img
               src="./img/location-map-mobile.jpg"
               alt="местоположение офиса на карте"
@@ -352,43 +362,45 @@
               width="320"
               height="362"
           /></picture>
-        </div>
-      </section>
+        </section>
 
-      <section class="copyright">
-        <a href="./index.html" class="logo"
-          ><img
-            src="./img/logo-text.svg"
-            alt="Логотип Кэт энерджи"
-            class="logo__text"
-            width="128"
-            height="24"
-        /></a>
-        <ul class="socials">
-          <li class="social__item">
-            <a href="#" class="social__link" aria-label="Вконтакте"></a>
-          </li>
-          <li class="social__item">
-            <a href="#" class="social__link" aria-label="Ютуб"></a>
-          </li>
-          <li class="social__item">
-            <a href="#" class="social__link" aria-label="Телеграм"></a>
-          </li>
-        </ul>
-        <a
-          class="copyright__link"
-          href="https://htmlacademy.ru/intensive/adaptive"
-        >
-          <span class="copyright__text">HTML Academy</span>
-          <img
-            src="./img/logo-htmlacademy.svg"
-            alt="Лого HTML Академия"
-            class="copyright__logo"
-            width="47"
-            height="34"
-          />
-        </a>
-      </section>
+        <section class="copyright">
+          <div class="copyright__wrapper container">
+            <a class="copyright__logo logo">
+              <img
+                src="./img/logo-text.svg"
+                alt="Логотип Кэт энерджи"
+                class="logo__text"
+                width="128"
+                height="24"
+            /></a>
+            <ul class="copyright__socials socials">
+              <li class="social__item">
+                <a href="#" class="social__link" aria-label="Вконтакте"></a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link" aria-label="Ютуб"></a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link" aria-label="Телеграм"></a>
+              </li>
+            </ul>
+            <a
+              class="copyright__link"
+              href="https://htmlacademy.ru/intensive/adaptive"
+            >
+              <span class="copyright__text">HTML Academy</span>
+              <img
+                src="./img/logo-htmlacademy.svg"
+                alt="Лого HTML Академия"
+                class="copyright__academy"
+                width="47"
+                height="34"
+              />
+            </a>
+          </div>
+        </section>
+
     </footer>
   </body>
 </html>

@@ -1,1 +1,29 @@
-// Начните писать стили здесь
+// Variables & mixins
+@import "./variables.scss";
+@import "./mixins.scss";
+
+// Base properties
+@import "./base/fonts.scss";
+@import "./base/base.scss";
+
+// Blocks
+@import "./blocks/page.scss";
+@import "./blocks/container.scss";
+@import "./blocks/header.scss";
+@import "./blocks/site-navigation.scss";
+@import "./blocks/title.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/button.scss";
+@import "./blocks/programs.scss";
+@import "./blocks/steps.scss";
+@import "./blocks/example.scss";
+@import "./blocks/contacts.scss";
+@import "./blocks/socials.scss";
+@import "./blocks/copyright.scss";
+@import "./blocks/form.scss";
+@import "./blocks/cat-info.scss";
+@import "./blocks/input.scss";
+@import "./blocks/logo.scss";
+@import "./blocks/catalog.scss";
+@import "./blocks/cards.scss";
+@import "./blocks/extra-goods.scss";

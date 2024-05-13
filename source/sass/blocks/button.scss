@@ -1,0 +1,17 @@
+.button {
+  font-family: $second-family;
+  width: 280px;
+  padding: 10px 63px;
+  color: #ffffff;
+  background-color: $basic-green;
+  font-size: 16px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+
+.button--show-all {
+  background-color: $basic-grey;
+  color: $special-dark-grey;
+}

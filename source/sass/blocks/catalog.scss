@@ -1,0 +1,32 @@
+.catalog {
+  padding-top: 27px;
+  padding-bottom: 24px;
+}
+
+.catalog__title {
+  margin-bottom: 41px;
+}
+
+.catalog__main-text {
+  font-family: $second-family;
+  width: 205px;
+  margin: 0 auto 8px;
+  font-size: 16px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  color: #111111;
+}
+
+.catalog__secondary-text {
+  width: 224px;
+  margin: 0 auto 21px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.33;
+  color: $special-dark-grey;
+}
+
+.catalog__button {
+  display: block;
+  margin: 0 auto;
+}

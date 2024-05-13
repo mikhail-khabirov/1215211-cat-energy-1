@@ -1,0 +1,19 @@
+.site-navigation__list {
+  @include list-reset();
+}
+
+.site-navigation__item {
+  display: flex;
+  justify-content: center;
+}
+
+.site-navigation__link {
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none;
+  padding-top: 22px;
+  padding-bottom: 24px;
+}

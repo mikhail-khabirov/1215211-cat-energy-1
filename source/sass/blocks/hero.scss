@@ -1,0 +1,37 @@
+.hero__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-image: url("../../img/cat-background.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__title {
+  margin: 0 auto;
+  padding-top: 27px;
+  margin-bottom: 25px;
+  text-align: center;
+  width: 250px;
+}
+
+.hero__slogan {
+  margin: 0 auto 29px;
+  width: 198px;
+  font-family: $second-family;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+}
+
+.hero__button {
+  margin-bottom: 20px;
+}
