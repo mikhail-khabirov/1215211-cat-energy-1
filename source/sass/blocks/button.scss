@@ -14,4 +14,9 @@
 .button--show-all {
   background-color: $basic-grey;
   color: $special-dark-grey;
+
+  @media (min-width: $desktop-width) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }

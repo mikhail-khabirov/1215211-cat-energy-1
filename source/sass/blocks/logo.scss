@@ -1,8 +1,31 @@
 .logo {
   display: flex;
+  align-items: center;
   text-decoration: none;
 }
 
 .logo__img {
   margin-right: 56px;
+
+  @media (min-width: $tablet-width) {
+    width: 60px;
+    height: 50px;
+    margin-right: 13px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 14px;
+    width: 70px;
+    height: 59px;
+  }
+}
+
+.logo__text {
+  width: 101px;
+  height: 18px;
+
+  @media (min-width: $desktop-width) {
+    width: 118px;
+    height: 21px;
+  }
 }

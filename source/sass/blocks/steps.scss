@@ -2,6 +2,14 @@
   line-height: 1.11;
 
   margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    width: 380px;
+    margin-bottom: 32px;
+
+    font-size: 60px;
+    line-height: 1;
+  }
 }
 
 .steps__list {
@@ -11,12 +19,72 @@
 
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 629px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 47px;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 205px;
+  }
+}
+
+.steps__item {
+  width: 280px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  &::before {
+    content: "";
+    background-color: $basic-green;
+    width: 60px;
+    height: 60px;
+
+    @media (min-width: $tablet-width) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 245px;
+    min-height: 280px;
+    flex-direction: column;
+    gap: 0;
+    align-items: flex-start;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+
+      margin: 40px 0 31px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 230px;
+    min-height: 280px;
+  }
 }
 
 .steps__text {
   margin: 0;
-  font-family: $second-family;
+  width: 200px;
+
   line-height: 1.29;
   color: $special-dark-grey;
+
+  @media (min-width: $tablet-width) {
+    width: 245px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }

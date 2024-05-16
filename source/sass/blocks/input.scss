@@ -5,11 +5,19 @@
   font-family: $second-family;
 }
 
+.input__checkbox {
+  margin: 0;
+}
+
 .input__label {
   font-size: 16px;
   line-height: 1.12;
   text-transform: uppercase;
   color: $special-dark-grey;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
 }
 
 .input__field {
@@ -18,9 +26,15 @@
   line-height: 1.12;
   text-transform: uppercase;
   color: $special-dark-grey;
-  padding: 13px 15px 13px;
+  padding: 13px 15px;
   border: 1px solid #e7e7e7;
   flex-grow: 1;
+
+  @media (min-width: $tablet-width) {
+    padding: 11px 20px;
+    font-size: 20px;
+    line-height: 1.44;
+  }
 }
 
 .input__label--about-cat {
@@ -29,6 +43,16 @@
 
 .input__label--program {
   margin-left: 15px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 40px;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .input__label--contact {
@@ -37,6 +61,10 @@
 
 .input__label--add {
   margin-left: 15px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 20px;
+  }
 }
 
 .input__text--comment {
@@ -49,4 +77,10 @@
   line-height: 1.12;
   text-transform: uppercase;
   color: $special-dark-grey;
+
+  @media (min-width: $tablet-width) {
+    padding: 11px 20px;
+    font-size: 20px;
+    min-height: 175px;
+  }
 }

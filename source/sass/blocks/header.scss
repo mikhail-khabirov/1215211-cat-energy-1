@@ -1,4 +1,17 @@
 .header__container {
   padding-top: 13px;
   padding-bottom: 14px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
