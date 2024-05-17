@@ -1,10 +1,27 @@
 .catalog {
   padding-top: 27px;
-  padding-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    overflow: hidden;
+    padding-top: 65px;
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 188px;
+    padding-bottom: 76px;
+  }
 }
 
 .catalog__title {
   margin-bottom: 41px;
+
+  @media (min-width: $tablet-width) {
+    width: 430px;
+    margin-bottom: 165px;
+
+    font-size: 60px;
+  }
 }
 
 .catalog__main-text {
@@ -15,6 +32,14 @@
   line-height: 1.25;
   text-transform: uppercase;
   color: #111111;
+
+  @media (min-width: $tablet-width) {
+    width: 134px;
+    margin-bottom: 23px;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center;
+  }
 }
 
 .catalog__secondary-text {
@@ -24,6 +49,13 @@
   font-size: 12px;
   line-height: 1.33;
   color: $special-dark-grey;
+
+  @media (min-width: $tablet-width) {
+    width: 170px;
+    margin-bottom: 82px;
+    font-size: 16px;
+    line-height: 1.12;
+  }
 }
 
 .catalog__button {

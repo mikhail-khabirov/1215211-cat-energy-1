@@ -8,4 +8,8 @@
 
 .title--hero {
   color: #ffffff;
+
+  @media (min-width: $tablet-width) {
+    color: #000000;
+  }
 }

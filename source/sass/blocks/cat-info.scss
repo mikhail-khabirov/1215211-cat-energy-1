@@ -1,38 +1,147 @@
 .cat-info {
-  max-width: 320px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 30px;
+    padding-right: 30px;
+    min-width: 628px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1440px;
+    padding-left: 110px;
+    padding-right: 110px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.cat-info__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 533px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px 123px;
+    justify-content: space-between;
+    padding-right: 70px;
+
+    @media (min-width: $desktop-width) {
+      width: 1125px;
+      gap: 0;
+      padding-right: 0;
+    }
+
+    @media (min-width: $tablet-width) {
+      .input {
+        width: 221px;
+      }
+    }
+  }
 }
 
 .cat-info__group {
   margin: 0;
-  padding: 0;
   border: none;
   display: flex;
   flex-direction: column;
+  padding-right: 0;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+  }
 }
 
 .cat-info__group--about-cat {
-  padding: 0 20px 24px;
+  padding-top: 0;
+  padding-bottom: 24px;
   gap: 14px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 72px;
+    gap: 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 570px;
+    padding-bottom: 70px;
+  }
 }
 
 .cat-info__group--program {
-  padding: 22px 20px 19px;
+  padding-top: 22px;
+  padding-bottom: 19px;
   gap: 13px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 23px;
+    padding-bottom: 27px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 25px 28px;
+    width: 570px;
+    min-height: 196px;
+  }
 }
 
 .cat-info__group--contact {
-  padding: 0 20px 24px;
+  padding-top: 0;
+  padding-bottom: 24px;
   gap: 14px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 65px;
+    gap: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    padding-bottom: 70px;
+    flex-direction: row;
+    gap: 80px;
+  }
 }
 
 .cat-info__group--comment {
-  padding: 0 20px 23px;
+  padding-top: 0;
+  padding-bottom: 23px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 65px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    padding-bottom: 70px;
+  }
 }
 
 .cat-info__group--add {
-  padding: 0 20px 34px;
+  padding-top: 0;
+  padding-bottom: 34px;
   gap: 13px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 52px;
+  }
+}
+
+.cat-info__input-contact {
+  @media (min-width: $desktop-width) {
+    width: 570px;
+  }
 }
 
 .cat-info__title {
@@ -41,31 +150,85 @@
   font-size: 24px;
   line-height: 1.08;
   color: #000000;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 1;
+  }
 }
 
 .cat-info__title--contact {
   width: 187px;
   padding-top: 26px;
   margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    width: 513px;
+    padding-top: 65px;
+    margin-bottom: 76px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+  }
 }
 
 .cat-info__title--comment {
   width: 121px;
-  padding-top: 24px;
   margin-bottom: 38px;
+
+  @media (min-width: $tablet-width) {
+    width: 182px;
+    margin-bottom: 87px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 78px;
+  }
 }
 
 .cat-info__title--add {
   margin-bottom: 34px;
+
+  @media (min-width: $tablet-width) {
+    width: 212px;
+    margin-bottom: 57px;
+  }
 }
 
 .cat-info__button {
   display: block;
   margin: 0 auto 21px;
+
+  @media (min-width: $tablet-width) {
+    width: 284px;
+    padding: 14px 60px;
+    display: inline-block;
+    margin: 0 0 0 40px;
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+    width: 570px;
+  }
 }
 
 .cat-info__text {
   width: 154px;
   margin: 0 auto;
   line-height: 1.14;
+
+  @media (min-width: $tablet-width) {
+    display: inline-block;
+    width: 180px;
+    margin-left: 60px;
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-self: center;
+  }
 }

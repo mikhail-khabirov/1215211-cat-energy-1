@@ -1,5 +1,10 @@
 .site-navigation__list {
   @include list-reset();
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    gap: 33px;
+  }
 }
 
 .site-navigation__item {
@@ -16,4 +21,26 @@
   text-decoration: none;
   padding-top: 22px;
   padding-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 1.33;
+    padding-top: 14px;
+    padding-bottom: 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    color: #ffffff;
+  }
+
+  &--inner {
+    color: #111111;
+  }
+}
+
+.site-navigation__button {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
