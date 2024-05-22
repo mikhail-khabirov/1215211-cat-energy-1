@@ -37,6 +37,7 @@
 }
 
 .steps__item {
+  position: relative;
   width: 280px;
   display: flex;
   align-items: center;
@@ -45,6 +46,8 @@
   &::before {
     content: "";
     background-color: $basic-green;
+    background-repeat: no-repeat;
+    background-position: center;
     width: 60px;
     height: 60px;
 
@@ -67,11 +70,56 @@
 
       margin: 40px 0 31px;
     }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 14px;
+      font-family: $second-family;
+      font-size: 280px;
+      line-height: 1;
+      color: $basic-grey;
+      z-index: -1;
+    }
   }
 
   @media (min-width: $desktop-width) {
     width: 230px;
     min-height: 280px;
+  }
+
+  &--leaf::before {
+    background-image: url("../../img/leaf.svg");
+  }
+
+  &--boil::before {
+    background-image: url("../../img/boil.svg");
+  }
+
+  &--eat::before {
+    background-image: url("../../img/eat.svg");
+  }
+
+  &--alarm::before {
+    background-image: url("../../img/alarm.svg");
+  }
+
+  @media (min-width: $tablet-width) {
+    &--leaf::after {
+      content: "1";
+    }
+
+    &--boil::after {
+      content: "2";
+    }
+
+    &--eat::after {
+      content: "3";
+    }
+
+    &--alarm::after {
+      content: "4";
+    }
   }
 }
 

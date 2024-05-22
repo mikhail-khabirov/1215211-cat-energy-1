@@ -31,7 +31,7 @@
             height="18"
         /></a>
 
-        <nav class="site-navigation">
+        <nav class="site-navigation site-navigation--no-js">
           <ul class="site-navigation__list">
             <li class="site-navigation__item">
               <a class="site-navigation__link site-navigation__link--current"
@@ -84,7 +84,9 @@
           <h2 class="visually-hidden">Программы питания</h2>
           <ul class="programs__list">
             <li class="programs__card">
-              <h3 class="programs__card-title">похудение</h3>
+              <h3 class="programs__card-title programs__card-title--cat-sit">
+                похудение
+              </h3>
               <p class="programs__card-text">
                 Ваш кот весит больше собаки и почти утратил способность лазить
                 по деревьям? Пора на диету! Cat Energy Slim поможет вашему
@@ -93,7 +95,9 @@
               <a href="#" class="programs__card-link">каталог slim</a>
             </li>
             <li class="programs__card">
-              <h3 class="programs__card-title">Набор массы</h3>
+              <h3 class="programs__card-title programs__card-title--cat-walk">
+                Набор массы
+              </h3>
               <p class="programs__card-text">
                 Заработать авторитет среди дворовых котов и даже собак? Серия
                 Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
@@ -108,25 +112,25 @@
         <div class="container">
           <h2 class="steps__title title">Как это работает</h2>
           <ul class="steps__list">
-            <li class="steps__item">
+            <li class="steps__item steps__item--leaf">
               <p class="steps__text">
                 Функциональное питание содержит только полезные питательные
                 вещества.
               </p>
             </li>
-            <li class="steps__item">
+            <li class="steps__item steps__item--boil">
               <p class="steps__text">
                 Выпускается в виде порошка, который нужно лишь залить кипятком и
                 готово.
               </p>
             </li>
-            <li class="steps__item">
+            <li class="steps__item steps__item--eat">
               <p class="steps__text">
                 Замените один-два приема обычной еды на наше функциональное
                 питание.
               </p>
             </li>
-            <li class="steps__item">
+            <li class="steps__item steps__item--alarm">
               <p class="steps__text">
                 Уже через месяц наслаждайтесь изменениями к лучшему вашего
                 питомца!
@@ -156,7 +160,10 @@
                 <dd class="example__desc-meaning">затрачено времени</dd>
               </div>
             </dl>
-            <p class="example__spendings">Затраты на питание: <span class="example__price">15 000 РУБ.</span></p>
+            <p class="example__spendings">
+              Затраты на питание:
+              <span class="example__price">15 000 РУБ.</span>
+            </p>
           </div>
         </div>
         <div class="example__picture-wrapper">
@@ -180,14 +187,15 @@
             <span class="contacts__city">Санкт-Петербург</span>
           </p>
         </div>
-        <picture class="contacts__picture-wrapper"
-          ><img
-            src="./img/location-map-mobile.jpg"
-            alt="местоположение офиса на карте"
-            class="contacts__map"
-            width="320"
-            height="362"
-        /></picture>
+        <iframe
+          class="contacts__picture-wrapper contacts__map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257197507!2d30.32047247624954!3d59.93871916209469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1716359340768!5m2!1sru!2sru"
+          width="400"
+          height="300"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </section>
 
       <section class="copyright">
@@ -202,13 +210,25 @@
           /></a>
           <ul class="copyright__socials socials">
             <li class="social__item">
-              <a href="#" class="social__link" aria-label="Вконтакте"></a>
+              <a
+                href="#"
+                class="social__link social__link--vk"
+                aria-label="Вконтакте"
+              ></a>
             </li>
             <li class="social__item">
-              <a href="#" class="social__link" aria-label="Ютуб"></a>
+              <a
+                href="#"
+                class="social__link social__link--youtube"
+                aria-label="Ютуб"
+              ></a>
             </li>
             <li class="social__item">
-              <a href="#" class="social__link" aria-label="Телеграм"></a>
+              <a
+                href="#"
+                class="social__link social__link--telegram"
+                aria-label="Телеграм"
+              ></a>
             </li>
           </ul>
           <a
@@ -227,5 +247,6 @@
         </div>
       </section>
     </footer>
+    <script src="./js/script.js"></script>
   </body>
 </html>
