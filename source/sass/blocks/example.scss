@@ -3,7 +3,7 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     background-color: $basic-grey;
     gap: 224px;
     padding-left: 110px;
@@ -20,6 +20,7 @@
     padding-top: 45px;
     padding-right: 30px;
     padding-left: 30px;
+    border-top: 1px solid #e6e6e6;
   }
 
   @media (min-width: $desktop-width) {
@@ -27,6 +28,7 @@
     margin: 0;
     width: 436px;
     transform: translateY(-136px);
+    border-top: none;
   }
 }
 
@@ -87,9 +89,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: url("../../img/border.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
 
   @media (min-width: $tablet-width) {
     width: 162px;
+
+    &:nth-child(2) {
+      background-image: url("../../img/border-wide.svg");
+    }
   }
 }
 
@@ -194,14 +203,34 @@
 
   &--before {
     background-image: url("../../img/cat-before.png");
+
+    @media (min-width: $tablet-width) {
+      background-image: url("../../img/cat-before-tablet.png");
+    }
   }
 
   &--after {
     background-image: url("../../img/cat-after.png");
     background-position: 100%;
+
+    @media (min-width: $tablet-width) {
+      background-image: url("../../img/cat-after-tablet.png");
+    }
   }
 }
 
 .example__toggle {
   position: absolute;
+  width: 40px;
+  height: 256px;
+  background-image: url("../../img/curtain.svg");
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../../img/curtain-long.svg");
+    height: 512px;
+    top: -135px;
+  }
 }

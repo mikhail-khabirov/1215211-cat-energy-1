@@ -12,17 +12,51 @@
   }
 }
 
+.extra-goods__container {
+  position: relative;
+  overflow: hidden;
+}
+
 .extra-goods__title {
+  position: relative;
   margin: 0 0 36px;
   width: 226px;
   font-family: $second-family;
   font-size: 24px;
   font-weight: 400;
 
+  &::after {
+    @include pseudo-elem(100vw, 2px, 12px, 0);
+    background-color: $basic-green;
+    margin-left: 265px;
+
+    @media (min-width: $tablet-width) {
+      top: 21px;
+      margin-left: 460px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 530px;
+    }
+  }
+
+  &::before {
+    @media (min-width: $tablet-width) {
+      @include pseudo-elem(30px, 2px, 21px, -60px);
+      background-color: $basic-green;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: -140px;
+      width: 70px;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     width: 340px;
     margin-bottom: 80px;
     font-size: 36px;
+    margin-left: 30px;
   }
 }
 
@@ -30,6 +64,7 @@
   @media (min-width: $desktop-width) {
     display: flex;
     align-items: flex-start;
+    justify-content: space-between;
   }
 }
 
@@ -56,16 +91,25 @@
 .extra-goods__item {
   padding-top: 13px;
   padding-bottom: 19px;
+  border-top: 1px solid $special-grey;
+
+  &:last-child {
+    border-bottom: 1px solid $special-grey;
+  }
 
   @media (min-width: $tablet-width) {
     flex-grow: 1;
     padding: 26px 38px 37px 28px;
+    border: 1px solid $special-grey;
+    border-bottom: none;
   }
 
   @media (min-width: $desktop-width) {
     display: flex;
     align-items: center;
     padding: 15px 0 17px;
+    border-left: none;
+    border-right: none;
   }
 }
 
@@ -95,6 +139,7 @@
   width: 280px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   @media (min-width: $tablet-width) {
     width: 223px;
@@ -136,21 +181,40 @@
 }
 
 .extra-goods__present {
+  position: relative;
   min-height: 290px;
   margin: 0 auto;
   background-image: url("../../img/cat-background-catalog.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
+  &::before {
+    @include pseudo-elem(78px, 80px, 58px, 50%);
+    background-image: url("../../img/present.svg");
+    transform: translateX(-50%);
+
+    @media (min-width: $tablet-width) {
+      transform: none;
+      top: 57px;
+      left: 77px;
+      width: 80px;
+      height: 82px;
+    }
+  }
+
   @media (min-width: $tablet-width) {
+    background-image: url("../../img/cat-background-catalog-tablet.jpg");
+    background-size: cover;
     min-height: 200px;
   }
 
   @media (min-width: $desktop-width) {
+    background-image: url("../../img/cat-background-catalog.jpg");
     width: 245px;
     min-height: 288px;
     display: flex;
     justify-content: center;
+    margin: 0;
   }
 }
 
@@ -164,8 +228,10 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    padding-top: 71px;
-    margin: 0 125px 69px 421px;
+    padding: 0;
+    position: absolute;
+    top: 71px;
+    right: 125px;
     text-align: left;
   }
 
@@ -173,6 +239,8 @@
     padding: 0;
     margin: 0;
     text-align: center;
-    margin-top: 185px;
+    top: 185px;
+    right: 50%;
+    transform: translateX(50%);
   }
 }

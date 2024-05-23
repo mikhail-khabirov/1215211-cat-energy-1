@@ -31,18 +31,25 @@
             height="18"
         /></a>
 
-        <nav class="site-navigation">
+        <nav class="site-navigation site-navigation--no-js">
           <ul class="site-navigation__list">
             <li class="site-navigation__item">
-              <a href="./index.html" class="site-navigation__link site-navigation__link--inner">главная</a>
+              <a
+                href="./index.html"
+                class="site-navigation__link site-navigation__link--inner"
+                >главная</a
+              >
             </li>
             <li class="site-navigation__item">
-              <a href="./catalog.html" class="site-navigation__link site-navigation__link--inner"
+              <a
+                href="./catalog.html"
+                class="site-navigation__link site-navigation__link--inner"
                 >каталог продукции</a
               >
             </li>
             <li class="site-navigation__item">
-              <a class="site-navigation__link site-navigation__link--current site-navigation__link--inner"
+              <a
+                class="site-navigation__link site-navigation__link--current site-navigation__link--inner"
                 >подбор программы</a
               >
             </li>
@@ -56,7 +63,7 @@
       </div>
     </header>
 
-    <main class="main">
+    <main class="page__main main">
       <section class="form">
         <div class="form__container container">
           <h1 class="form__title title">Подбор программы</h1>
@@ -83,6 +90,7 @@
                 value="БАРСИК"
                 placeholder="Введите имя кота"
               />
+
             </p>
             <p class="input">
               <label for="weight" class="input__label input__label--about-cat"
@@ -114,21 +122,22 @@
             <p class="input">
               <input
                 type="radio"
-                class="input__radio"
+                class="input__radio visually-hidden"
                 name="program"
                 id="lose-weight"
                 value="lose-weight"
                 checked
-              /><label
+              />
+              <label
                 for="lose-weight"
-                class="input__label input__label--program"
+                class="input__label input__label--program "
                 >похудение</label
               >
             </p>
             <p class="input">
               <input
                 type="radio"
-                class="input__radio"
+                class="input__radio visually-hidden"
                 name="program"
                 id="gain-weight"
                 value="gain-weight"
@@ -141,7 +150,7 @@
             <p class="input">
               <input
                 type="radio"
-                class="input__radio"
+                class="input__radio visually-hidden"
                 name="program"
                 id="not-sure"
                 value="not-sure"
@@ -196,7 +205,7 @@
               <p class="input">
                 <input
                   type="checkbox"
-                  class="input__checkbox"
+                  class="input__checkbox visually-hidden"
                   name="sweetener"
                   id="sweetener"
                   checked
@@ -207,7 +216,7 @@
               <p class="input">
                 <input
                   type="checkbox"
-                  class="input__checkbox"
+                  class="input__checkbox visually-hidden"
                   name="water"
                   id="water"
                 /><label for="water" class="input__label input__label--add"
@@ -217,7 +226,7 @@
               <p class="input">
                 <input
                   type="checkbox"
-                  class="input__checkbox"
+                  class="input__checkbox visually-hidden"
                   name="milk"
                   id="milk"
                 /><label for="milk" class="input__label input__label--add"
@@ -227,7 +236,7 @@
               <p class="input">
                 <input
                   type="checkbox"
-                  class="input__checkbox"
+                  class="input__checkbox visually-hidden"
                   name="vitamins"
                   id="vitamins"
                 /><label for="vitamins" class="input__label input__label--add"
@@ -235,8 +244,6 @@
                 >
               </p>
             </div>
-
-
           </fieldset>
           <button class="cat-info__button button">отправить заявку</button>
           <p class="cat-info__text">* — Обязательные поля</p>
@@ -254,14 +261,15 @@
             <span class="contacts__city">Санкт-Петербург</span>
           </p>
         </div>
-        <picture class="contacts__picture-wrapper"
-          ><img
-            src="./img/location-map-mobile.jpg"
-            alt="местоположение офиса на карте"
-            class="contacts__map"
-            width="320"
-            height="362"
-        /></picture>
+        <iframe
+          class="contacts__picture-wrapper contacts__map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257197507!2d30.32047247624954!3d59.93871916209469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1716359340768!5m2!1sru!2sru"
+          width="400"
+          height="300"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </section>
 
       <section class="copyright">
@@ -276,13 +284,25 @@
           /></a>
           <ul class="copyright__socials socials">
             <li class="social__item">
-              <a href="#" class="social__link" aria-label="Вконтакте"></a>
+              <a
+                href="#"
+                class="social__link social__link--vk"
+                aria-label="Вконтакте"
+              ></a>
             </li>
             <li class="social__item">
-              <a href="#" class="social__link" aria-label="Ютуб"></a>
+              <a
+                href="#"
+                class="social__link social__link--youtube"
+                aria-label="Ютуб"
+              ></a>
             </li>
             <li class="social__item">
-              <a href="#" class="social__link" aria-label="Телеграм"></a>
+              <a
+                href="#"
+                class="social__link social__link--telegram"
+                aria-label="Телеграм"
+              ></a>
             </li>
           </ul>
           <a
@@ -301,5 +321,6 @@
         </div>
       </section>
     </footer>
+    <script src="./js/script.js"></script>
   </body>
 </html>

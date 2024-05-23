@@ -1,8 +1,21 @@
+.page {
+  height: 100%;
+}
+
 .page__body {
   min-width: 280px;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+
+  @media (min-width: $desktop-width) {
+    grid-template-rows: 1fr min-content;
+  }
 }
 
 .page__header {
+  position: relative;
+
   @media (min-width: $tablet-width) {
     margin-top: 25px;
   }
@@ -15,4 +28,8 @@
     width: 100%;
     margin-top: 55px;
   }
+}
+
+.page__main {
+  overflow: hidden;
 }
