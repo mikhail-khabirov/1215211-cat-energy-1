@@ -18,6 +18,7 @@
 }
 
 .extra-goods__title {
+  position: relative;
   margin: 0 0 36px;
   width: 226px;
   font-family: $second-family;
@@ -25,7 +26,7 @@
   font-weight: 400;
 
   &::after {
-    @include pseudo-elem(100%, 2px, 12px, 0);
+    @include pseudo-elem(100vw, 2px, 12px, 0);
     background-color: $basic-green;
     margin-left: 265px;
 
@@ -41,11 +42,12 @@
 
   &::before {
     @media (min-width: $tablet-width) {
-      @include pseudo-elem(30px, 2px, 21px, 0);
+      @include pseudo-elem(30px, 2px, 21px, -60px);
       background-color: $basic-green;
     }
 
     @media (min-width: $desktop-width) {
+      left: -140px;
       width: 70px;
     }
   }

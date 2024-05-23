@@ -192,12 +192,13 @@
 }
 
 .cat-info__title--contact {
+  position: relative;
   width: 187px;
   padding-top: 26px;
   margin-bottom: 35px;
 
   @media (min-width: $tablet-width) {
-    width: 513px;
+    width: 600px;
     padding-top: 65px;
     margin-bottom: 76px;
   }
@@ -209,21 +210,20 @@
   &::after {
     content: "";
     position: absolute;
-    width: 100%;
+    width: 100vw;
     height: 2px;
-    top: 562px;
-    right: 0;
-    margin-right: -230px;
+    top: 41px;
+    left: 0;
+    margin-left: 205px;
     background-color: $basic-green;
 
     @media (min-width: $tablet-width) {
-      top: 825px;
-      margin-right: -617px;
+      top: 86px;
+      margin-left: 553px;
     }
 
     @media (min-width: $desktop-width) {
-      top: 717px;
-      margin-right: -686px;
+      top: 20px;
     }
   }
 
@@ -233,24 +233,26 @@
       position: absolute;
       width: 30px;
       height: 2px;
-      top: 825px;
-      left: 0;
+      top: 86px;
+      left: -70px;
       background-color: $basic-green;
     }
 
     @media (min-width: $desktop-width) {
-      top: 717px;
+      top: 20px;
       width: 70px;
+      left: -110px;
     }
   }
 }
 
 .cat-info__title--comment {
+  position: relative;
   width: 121px;
   margin-bottom: 38px;
 
   @media (min-width: $tablet-width) {
-    width: 182px;
+    width: 300px;
     margin-bottom: 87px;
   }
 
@@ -261,21 +263,20 @@
   &::after {
     content: "";
     position: absolute;
-    width: 100%;
+    width: 100vw;
     height: 2px;
-    top: 776px;
-    right: 0;
-    margin-right: -162px;
+    top: 13px;
+    left: 0;
+    margin-left: 145px;
     background-color: $basic-green;
 
     @media (min-width: $tablet-width) {
-      top: 1127px;
-      margin-right: -301px;
+      top: 20px;
+      margin-left: 238px;
     }
 
     @media (min-width: $desktop-width) {
-      top: 953px;
-      margin-right: -336px;
+      top: 20px;
     }
   }
 
@@ -285,19 +286,20 @@
       position: absolute;
       width: 30px;
       height: 2px;
-      top: 1127px;
-      left: 0;
+      top: 20px;
+      left: -70px;
       background-color: $basic-green;
     }
 
     @media (min-width: $desktop-width) {
-      top: 953px;
       width: 70px;
+      left: -110px;
     }
   }
 }
 
 .cat-info__title--add {
+  position: relative;
   margin-bottom: 34px;
 
   @media (min-width: $tablet-width) {
@@ -308,21 +310,20 @@
   &::after {
     content: "";
     position: absolute;
-    width: 100%;
+    width: 100vw;
     height: 2px;
-    top: 1014px;
-    right: 0;
-    margin-right: -185px;
+    top: 13px;
+    left: 0;
+    margin-left: 168px;
     background-color: $basic-green;
 
     @media (min-width: $tablet-width) {
-      top: 1490px;
-      margin-right: -315px;
+      top: 20px;
+      margin-left: 238px;
     }
 
     @media (min-width: $desktop-width) {
-      top: 1312px;
-      margin-right: -374px;
+      top: 20px;
     }
   }
 
@@ -332,14 +333,14 @@
       position: absolute;
       width: 30px;
       height: 2px;
-      top: 1490px;
-      left: 0;
+      top: 20px;
+      left: -70px;
       background-color: $basic-green;
     }
 
     @media (min-width: $desktop-width) {
-      top: 1312px;
       width: 70px;
+      left: -110px;
     }
   }
 }
