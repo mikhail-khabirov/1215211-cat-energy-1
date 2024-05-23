@@ -4,13 +4,13 @@
   padding: 0;
 }
 
-@mixin pseudo-elem($w, $h, $t, $l) {
+@mixin pseudo-elem($width: 78px, $height: 80px, $top: 58px, $left: 50%) {
   content: "";
   position: absolute;
-  width: $w;
-  height: $h;
+  width: $width;
+  height: $height;
   background-repeat: no-repeat;
   background-position: center;
-  top: $t;
-  left: $l;
+  top: $top;
+  left: $left;
 }
