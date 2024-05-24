@@ -8,7 +8,7 @@
     <link rel="icon" href="../favicon.ico" />
     <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon.png" />
-    <link rel="manifest" href="../manifest.webmanifest" />
+    <link rel="manifest" href="./manifest.webmanifest" />
     <!-- styles -->
     <link rel="stylesheet" href="./css/style.css" />
     <title>HTML Academy: Кэт энерджи</title>
@@ -17,12 +17,23 @@
     <header class="page__header header">
       <div class="header__container container">
         <a class="logo"
-          ><img
-            class="logo__img"
-            src="./img/logo-pic-mobile.svg"
-            alt="логотип Кэт энерджи"
-            width="33"
-            height="38" />
+          ><picture>
+            <source
+              media="(min-width: 1440px)"
+              srcset="./img/logo-pic-desktop.svg"
+            />
+            <source
+              media="((min-width: 768px))"
+              srcset="./img/logo-pic-tablet.svg"
+            />
+            <img
+              class="logo__img"
+              src="./img/logo-pic-mobile.svg"
+              alt="логотип Кэт энерджи"
+              width="33"
+              height="38"
+            />
+          </picture>
           <img
             class="logo__text"
             src="./img/logo-text.svg"
@@ -63,13 +74,32 @@
             Функциональное питание для котов
           </h1>
           <p class="hero__slogan">Занялся собой? Займись котом!</p>
-          <picture class="hero__image-wrapper">
+          <picture>
+            <source
+              media="(min-width: 1440px)"
+              srcset="
+                ./img/index-can-desktop@1x.png 1x,
+                ./img/index-can-desktop@2x.png 2x
+              "
+              width="552"
+              height="499"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                ./img/index-can-tablet@1x.png 1x,
+                ./img/index-can-tablet@2x.png 2x
+              "
+              width="709"
+              height="609"
+            />
             <img
               src="./img/index-can-mobile.png"
               alt="Еда для кота Cat Energy Pro с курицей"
               class="hero__image"
               width="280"
               height="270"
+              srcset="./img/index-can-mobile@2x.png 2x"
             />
           </picture>
 

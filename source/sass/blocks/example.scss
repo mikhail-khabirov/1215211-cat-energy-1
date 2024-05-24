@@ -204,8 +204,16 @@
   &--before {
     background-image: url("../../img/cat-before.png");
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/cat-before@2x.png");
+    }
+
     @media (min-width: $tablet-width) {
       background-image: url("../../img/cat-before-tablet.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/cat-before-tablet@2x.png");
+      }
     }
   }
 
@@ -213,8 +221,16 @@
     background-image: url("../../img/cat-after.png");
     background-position: 100%;
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/cat-after@2x.png");
+    }
+
     @media (min-width: $tablet-width) {
       background-image: url("../../img/cat-after-tablet.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/cat-after-tablet@2x.png");
+      }
     }
   }
 }

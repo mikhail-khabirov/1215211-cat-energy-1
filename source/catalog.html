@@ -8,7 +8,7 @@
     <link rel="icon" href="../favicon.ico" />
     <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon.png" />
-    <link rel="manifest" href="../manifest.webmanifest" />
+    <link rel="manifest" href="./manifest.webmanifest" />
     <!-- styles -->
     <link rel="stylesheet" href="./css/style.css" />
     <title>HTML Academy: Кэт энерджи | Каталог продукции</title>
@@ -17,12 +17,23 @@
     <header class="page__header header">
       <div class="header__container container">
         <a href="./index.html" class="logo"
-          ><img
-            class="logo__img"
-            src="./img/logo-pic-mobile.svg"
-            alt="логотип Кэт энерджи"
-            width="33"
-            height="38" />
+          ><picture>
+            <source
+              media="(min-width: 1440px)"
+              srcset="./img/logo-pic-desktop.svg"
+            />
+            <source
+              media="((min-width: 768px))"
+              srcset="./img/logo-pic-tablet.svg"
+            />
+            <img
+              class="logo__img"
+              src="./img/logo-pic-mobile.svg"
+              alt="логотип Кэт энерджи"
+              width="33"
+              height="38"
+            />
+          </picture>
           <img
             class="logo__text"
             src="./img/logo-text.svg"
@@ -71,12 +82,20 @@
             <li class="cards__item">
               <div class="cards__wrapper">
                 <picture>
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./img/cat-food-500-chicken-tablet@1x.png 1x,
+                      ./img/cat-food-500-chicken-tablet@2x.png 2x
+                    "
+                  />
                   <img
                     src="./img/cat-food/cat-food-500-chicken.png"
                     alt="оранжевая банка с едой"
                     class="cards__image"
                     width="140"
                     height="107"
+                    srcset="./img/cat-food-500-chicken@2x.png 2x"
                   />
                 </picture>
 
@@ -105,12 +124,20 @@
             <li class="cards__item">
               <div class="cards__wrapper">
                 <picture>
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./img/cat-food-1000-chicken-tablet@1x.png 1x,
+                      ./img/cat-food-1000-chicken-tablet@2x.png 2x
+                    "
+                  />
                   <img
                     src="./img/cat-food/cat-food-1000-chicken.png"
                     alt="оранжевая банка с едой"
                     class="cards__image"
                     width="140"
                     height="107"
+                    srcset="./img/cat-food-1000-chicken@2x.png 2x"
                   />
                 </picture>
 
@@ -139,12 +166,20 @@
             <li class="cards__item">
               <div class="cards__wrapper">
                 <picture>
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./img/cat-food-500-fish-tablet@1x.png 1x,
+                      ./img/cat-food-500-fish-tablet@2x.png 2x
+                    "
+                  />
                   <img
                     src="./img/cat-food/cat-food-500-fish.png"
                     alt="зеленая банка с едой"
                     class="cards__image"
                     width="140"
                     height="107"
+                    srcset="./img/cat-food-500-fish@2x.png 2x"
                   />
                 </picture>
 
@@ -173,12 +208,20 @@
             <li class="cards__item">
               <div class="cards__wrapper">
                 <picture>
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./img/cat-food-1000-fish-tablet@1x.png 1x,
+                      ./img/cat-food-1000-fish-tablet@2x.png 2x
+                    "
+                  />
                   <img
                     src="./img/cat-food/cat-food-1000-fish.png"
                     alt="зеленая банка с едой"
                     class="cards__image"
                     width="140"
                     height="107"
+                    srcset="./img/cat-food-1000-fish@2x.png 2x"
                   />
                 </picture>
 
@@ -207,12 +250,20 @@
             <li class="cards__item">
               <div class="cards__wrapper">
                 <picture>
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./img/cat-food-500-buckwheat-tablet@1x.png 1x,
+                      ./img/cat-food-500-buckwheat-tablet@2x.png 2x
+                    "
+                  />
                   <img
                     src="./img/cat-food/cat-food-500-buckwheat.png"
                     alt="синяя банка с едой"
                     class="cards__image"
                     width="140"
                     height="107"
+                    srcset="./img/cat-food-500-buckwheat@2x.png 2x"
                   />
                 </picture>
 
@@ -241,12 +292,20 @@
             <li class="cards__item">
               <div class="cards__wrapper">
                 <picture>
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./img/cat-food-1000-buckwheat-tablet@1x.png 1x,
+                      ./img/cat-food-1000-buckwheat-tablet@2x.png 2x
+                    "
+                  />
                   <img
                     src="./img/cat-food/cat-food-1000-buckwheat.png"
                     alt="синяя банка с едой"
                     class="cards__image"
                     width="140"
                     height="107"
+                    srcset="./img/cat-food-1000-buckwheat@2x.png 2x"
                   />
                 </picture>
 
@@ -274,13 +333,20 @@
             </li>
             <li class="cards__item">
               <div class="cards__wrapper">
-                <picture
-                  ><img
+                <picture>
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./img/cat-food-500-slim-tablet@1x.png 1x,
+                      ./img/cat-food-500-slim-tablet@2x.png 2x
+                    " />
+                  <img
                     src="./img/cat-food/cat-food-slim-500.png"
                     alt="фиолетовая банка с едой"
                     class="cards__image"
                     width="140"
                     height="107"
+                    srcset="./img/cat-food-500-slim@2x.png 2x"
                 /></picture>
 
                 <div>
