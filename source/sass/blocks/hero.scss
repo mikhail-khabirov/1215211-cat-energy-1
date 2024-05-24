@@ -34,7 +34,7 @@
         fade-out($basic-green, 0.15)
       ),
       url("../../img/cat-background-desktop.jpg");
-    background-size: 720px 694px, contain;
+    background-size: 720px 694px, 720px 694px;
     background-position: top right, top right;
 
     @media (min-resolution: 2dppx) {
@@ -56,12 +56,12 @@
 .hero__title {
   margin: 27px auto 25px;
   text-align: center;
-  width: 250px;
+  width: 270px;
 
   @media (min-width: $tablet-width) {
     margin: 65px 0 40px 90px;
     text-align: left;
-    width: 414px;
+    width: 550px;
     font-size: 60px;
   }
 
@@ -69,7 +69,6 @@
     position: relative;
     z-index: 1;
     margin: 224px 0 40px 80px;
-    width: 414px;
 
     font-size: 60px;
   }

@@ -206,6 +206,7 @@
 
     @media (min-resolution: 2dppx) {
       background-image: url("../../img/cat-before@2x.png");
+      background-size: cover;
     }
 
     @media (min-width: $tablet-width) {
@@ -223,6 +224,7 @@
 
     @media (min-resolution: 2dppx) {
       background-image: url("../../img/cat-after@2x.png");
+      background-size: cover;
     }
 
     @media (min-width: $tablet-width) {
