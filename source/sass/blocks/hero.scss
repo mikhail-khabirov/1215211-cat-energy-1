@@ -1,3 +1,7 @@
+.hero {
+  position: relative;
+}
+
 .hero__wrapper {
   display: flex;
   flex-direction: column;
@@ -69,6 +73,7 @@
     position: relative;
     z-index: 1;
     margin: 224px 0 40px 80px;
+
 
     font-size: 60px;
   }
