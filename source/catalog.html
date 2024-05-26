@@ -82,6 +82,8 @@
             <li class="cards__item">
               <div class="cards__wrapper">
                 <picture>
+                  <source media="(min-width: 768px)" srcset="./img/cat-food-500-chicken-tablet@1x.webp 1x, ./img/cat-food-500-chicken-tablet@2x.webp 2x">
+                  <source srcset="./img/cat-food-500-chicken.webp 1x, ./img/cat-food-500-chicken@2x.webp 2x">
                   <source
                     media="(min-width: 768px)"
                     srcset="
@@ -507,13 +509,9 @@
             href="https://htmlacademy.ru/intensive/adaptive"
           >
             <span class="copyright__text">HTML Academy</span>
-            <img
-              src="./img/logo-htmlacademy.svg"
-              alt="Лого HTML Академия"
-              class="copyright__academy"
-              width="27"
-              height="34"
-            />
+            <svg width="27" height="34" class="copyright__academy">
+              <use xlink:href="./img/sprite.svg#logo-htmlacademy"></use>
+            </svg>
           </a>
         </div>
       </section>
