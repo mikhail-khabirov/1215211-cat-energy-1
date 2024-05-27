@@ -8,7 +8,7 @@
     <link rel="icon" href="../favicon.ico" />
     <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon.png" />
-    <link rel="manifest" href="../manifest.webmanifest" />
+    <link rel="manifest" href="./manifest.webmanifest" />
     <!-- styles -->
     <link rel="stylesheet" href="./css/style.css" />
     <title>HTML Academy: Кэт энерджи</title>
@@ -17,12 +17,23 @@
     <header class="page__header header">
       <div class="header__container container">
         <a class="logo"
-          ><img
-            class="logo__img"
-            src="./img/logo-pic-mobile.svg"
-            alt="логотип Кэт энерджи"
-            width="33"
-            height="38" />
+          ><picture>
+            <source
+              media="(min-width: 1440px)"
+              srcset="./img/logo-pic-desktop.svg"
+            />
+            <source
+              media="((min-width: 768px))"
+              srcset="./img/logo-pic-tablet.svg"
+            />
+            <img
+              class="logo__img"
+              src="./img/logo-pic-mobile.svg"
+              alt="логотип Кэт энерджи"
+              width="33"
+              height="38"
+            />
+          </picture>
           <img
             class="logo__text"
             src="./img/logo-text.svg"
