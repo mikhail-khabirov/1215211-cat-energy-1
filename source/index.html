@@ -10,11 +10,10 @@
     <link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon.png" />
     <link rel="manifest" href="./manifest.webmanifest" />
     <!-- styles -->
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style.min.css" />
     <title>HTML Academy: Кэт энерджи</title>
   </head>
-  <body class="page__body" >
-
+  <body class="page__body">
     <header class="page__header header">
       <div class="header__container container">
         <a class="logo"
@@ -76,12 +75,31 @@
           </h1>
           <p class="hero__slogan">Занялся собой? Займись котом!</p>
           <picture>
-            <source media="(min-width: 1440px)" srcset="./img/index-can-desktop@1x.webp 1x, ./img/index-can-desktop@2x.webp 2x">
-            <source media="(min-width: 768px)" srcset="./img/index-can-tablet@1x.webp 1x, ./img/index-can-tablet@2x.webp 2x">
-            <source srcset="./img/index-can-mobile.webp 1x, ./img/index-can-mobile@2x.webp 2x">
             <source
               media="(min-width: 1440px)"
               srcset="
+
+                ./img/index-can-desktop@1x.webp 1x,
+                ./img/index-can-desktop@2x.webp 2x
+              "
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                ./img/index-can-tablet@1x.webp 1x,
+                ./img/index-can-tablet@2x.webp 2x
+              "
+            />
+            <source
+              srcset="
+                ./img/index-can-mobile.webp    1x,
+                ./img/index-can-mobile@2x.webp 2x
+              "
+            />
+            <source
+              media="(min-width: 1440px)"
+              srcset="
+
                 ./img/index-can-desktop@1x.png 1x,
                 ./img/index-can-desktop@2x.png 2x
               "
@@ -225,10 +243,7 @@
               <path d="M16 11L8 20L16 29V11Z" fill="#666666" />
               <path d="M32 20L24 11V29L32 20Z" fill="#666666" />
             </svg>
-
           </button>
-
-
         </div>
       </section>
     </main>
@@ -266,24 +281,22 @@
           /></a>
           <ul class="copyright__socials socials">
             <li class="social__item">
-              <a
-                href="#"
-                class="social__link social__link--vk"
-                aria-label="Вконтакте"
+              <a href="#" class="social__link" aria-label="Вконтакте">
+                <svg width="28" height="22" class="social__link-icon">
+                  <use xlink:href="./img/sprite.svg#logo-vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link" aria-label="Ютуб"
+                ><svg width="28" height="22" class="social__link-icon">
+                  <use xlink:href="./img/sprite.svg#logo-youtube"></use></svg
               ></a>
             </li>
             <li class="social__item">
-              <a
-                href="#"
-                class="social__link social__link--youtube"
-                aria-label="Ютуб"
-              ></a>
-            </li>
-            <li class="social__item">
-              <a
-                href="#"
-                class="social__link social__link--telegram"
-                aria-label="Телеграм"
+              <a href="#" class="social__link" aria-label="Телеграм"
+                ><svg width="28" height="22" class="social__link-icon">
+                  <use xlink:href="./img/sprite.svg#logo-tg"></use></svg
               ></a>
             </li>
           </ul>
@@ -293,7 +306,7 @@
           >
             <span class="copyright__text">HTML Academy</span>
             <svg width="27" height="34" class="copyright__academy">
-              <use xlink:href="./img/sprite.svg#logo-htmlacademy"></use>
+              <use xlink:href="./img/sprite.svg#logo-html-academy"></use>
             </svg>
           </a>
         </div>
