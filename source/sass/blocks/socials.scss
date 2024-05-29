@@ -4,6 +4,7 @@
   width: 280px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
 
@@ -26,4 +27,14 @@
 
 .social__link-icon {
   fill: $special-grey-3;
+  transition: fill 0.3s ease;
+
+  &:hover {
+    fill: $basic-green;
+  }
+
+  &:active {
+    fill: $basic-green;
+    opacity: 0.3;
+  }
 }

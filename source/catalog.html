@@ -4,19 +4,35 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="На этой странице вы можете ознакомиться с ассортиментом продукции Cat Energy."
+    />
     <!-- favicons -->
     <link rel="icon" href="../favicon.ico" />
     <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon.png" />
     <link rel="manifest" href="./manifest.webmanifest" />
-    <!-- styles -->
+    <!-- styles and fonts-->
     <link rel="stylesheet" href="./css/style.min.css" />
+    <link
+      rel="preload"
+      href="./fonts/lato/Lato-Regular.woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="./fonts/oswald/oswaldregular.woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
     <title>HTML Academy: Кэт энерджи | Каталог продукции</title>
   </head>
   <body class="page__body">
     <header class="page__header header">
       <div class="header__container container">
-        <a href="./index.html" class="logo"
+        <a class="logo" href="./index.html"
           ><picture>
             <source
               media="(min-width: 1440px)"
@@ -46,8 +62,8 @@
           <ul class="site-navigation__list">
             <li class="site-navigation__item">
               <a
-                href="./index.html"
                 class="site-navigation__link site-navigation__link--inner"
+                href="./index.html"
                 >главная</a
               >
             </li>
@@ -59,18 +75,16 @@
             </li>
             <li class="site-navigation__item">
               <a
-                href="./form.html"
                 class="site-navigation__link site-navigation__link--inner"
+                href="./form.html"
                 >подбор программы</a
               >
             </li>
           </ul>
         </nav>
-        <button
-          class="site-navigation__button"
-          aria-label="Открыть меню навигации"
-          type="button"
-        ></button>
+        <button class="site-navigation__button" type="button">
+          <span class="visually-hidden">Открыть меню навинации</span>
+        </button>
       </div>
     </header>
 
@@ -91,9 +105,10 @@
                   />
                   <source
                     srcset="
-                      ./img/cat-food-500-chicken.webp    1x,
-                      ./img/cat-food-500-chicken@2x.webp 2x
+                      ./img/cat-food/cat-food-500-chicken.webp 1x,
+                      ./img/cat-food-500-chicken@2x.webp       2x
                     "
+                    type="image/webp"
                   />
                   <source
                     media="(min-width: 768px)"
@@ -103,9 +118,9 @@
                     "
                   />
                   <img
+                    class="cards__image"
                     src="./img/cat-food/cat-food-500-chicken.png"
                     alt="оранжевая банка с едой"
-                    class="cards__image"
                     width="140"
                     height="107"
                     srcset="./img/cat-food-500-chicken@2x.png 2x"
@@ -146,9 +161,10 @@
                   />
                   <source
                     srcset="
-                      ./img/cat-food-1000-chicken.webp    1x,
-                      ./img/cat-food-1000-chicken@2x.webp 2x
+                      ./img/cat-food/cat-food-1000-chicken.webp 1x,
+                      ./img/cat-food-1000-chicken@2x.webp       2x
                     "
+                    type="image/webp"
                   />
                   <source
                     media="(min-width: 768px)"
@@ -158,9 +174,9 @@
                     "
                   />
                   <img
+                    class="cards__image"
                     src="./img/cat-food/cat-food-1000-chicken.png"
                     alt="оранжевая банка с едой"
-                    class="cards__image"
                     width="140"
                     height="107"
                     srcset="./img/cat-food-1000-chicken@2x.png 2x"
@@ -201,9 +217,10 @@
                   />
                   <source
                     srcset="
-                      ./img/cat-food-500-fish.webp    1x,
-                      ./img/cat-food-500-fish@2x.webp 2x
+                      ./img/cat-food/cat-food-500-fish.webp 1x,
+                      ./img/cat-food-500-fish@2x.webp       2x
                     "
+                    type="image/webp"
                   />
                   <source
                     media="(min-width: 768px)"
@@ -213,9 +230,9 @@
                     "
                   />
                   <img
+                    class="cards__image"
                     src="./img/cat-food/cat-food-500-fish.png"
                     alt="зеленая банка с едой"
-                    class="cards__image"
                     width="140"
                     height="107"
                     srcset="./img/cat-food-500-fish@2x.png 2x"
@@ -256,9 +273,10 @@
                   />
                   <source
                     srcset="
-                      ./img/cat-food-1000-fish.webp    1x,
-                      ./img/cat-food-1000-fish@2x.webp 2x
+                      ./img/cat-food/cat-food-1000-fish.webp 1x,
+                      ./img/cat-food-1000-fish@2x.webp       2x
                     "
+                    type="image/webp"
                   />
                   <source
                     media="(min-width: 768px)"
@@ -268,9 +286,9 @@
                     "
                   />
                   <img
+                    class="cards__image"
                     src="./img/cat-food/cat-food-1000-fish.png"
                     alt="зеленая банка с едой"
-                    class="cards__image"
                     width="140"
                     height="107"
                     srcset="./img/cat-food-1000-fish@2x.png 2x"
@@ -311,9 +329,10 @@
                   />
                   <source
                     srcset="
-                      ./img/cat-food-500-buckwheat.webp    1x,
-                      ./img/cat-food-500-buckwheat@2x.webp 2x
+                      ./img/cat-food/cat-food-500-buckwheat.webp 1x,
+                      ./img/cat-food-500-buckwheat@2x.webp       2x
                     "
+                    type="image/webp"
                   />
                   <source
                     media="(min-width: 768px)"
@@ -323,9 +342,9 @@
                     "
                   />
                   <img
+                    class="cards__image"
                     src="./img/cat-food/cat-food-500-buckwheat.png"
                     alt="синяя банка с едой"
-                    class="cards__image"
                     width="140"
                     height="107"
                     srcset="./img/cat-food-500-buckwheat@2x.png 2x"
@@ -366,9 +385,10 @@
                   />
                   <source
                     srcset="
-                      ./img/cat-food-1000-buckwheat.webp    1x,
-                      ./img/cat-food-1000-buckwheat@2x.webp 2x
+                      ./img/cat-food/cat-food-1000-buckwheat.webp 1x,
+                      ./img/cat-food-1000-buckwheat@2x.webp       2x
                     "
+                    type="image/webp"
                   />
                   <source
                     media="(min-width: 768px)"
@@ -378,9 +398,9 @@
                     "
                   />
                   <img
+                    class="cards__image"
                     src="./img/cat-food/cat-food-1000-buckwheat.png"
                     alt="синяя банка с едой"
-                    class="cards__image"
                     width="140"
                     height="107"
                     srcset="./img/cat-food-1000-buckwheat@2x.png 2x"
@@ -417,14 +437,13 @@
                     srcset="
                       ./img/cat-food-500-slim-tablet@1x.webp 1x,
                       ./img/cat-food-500-slim-tablet@2x.webp 2x
-                    "
-                  />
+                    " />
                   <source
                     srcset="
-                      ./img/cat-food-slim-500.webp    1x,
-                      ./img/cat-food-500-slim@2x.webp 2x
+                      ./img/cat-food/cat-food-slim-500.webp 1x,
+                      ./img/cat-food-500-slim@2x.webp       2x
                     "
-                  />
+                    type="image/webp" />
                   <source
                     media="(min-width: 768px)"
                     srcset="
@@ -432,9 +451,9 @@
                       ./img/cat-food-500-slim-tablet@2x.png 2x
                     " />
                   <img
+                    class="cards__image"
                     src="./img/cat-food/cat-food-slim-500.png"
                     alt="фиолетовая банка с едой"
-                    class="cards__image"
                     width="140"
                     height="107"
                     srcset="./img/cat-food-500-slim@2x.png 2x"
@@ -558,35 +577,99 @@
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
+        <noscript>
+          <picture>
+            <source
+              media="(min-width: 1440px)"
+              srcset="
+                ./img/location-map-desktop@1x.webp 1x,
+                ./img/location-map-desktop@2x.webp 2x
+              "
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                ./img/location-map-tablet@1x.webp 1x,
+                ./img/location-map-tablet@2x.webp 2x
+              "
+            />
+            <source
+              srcset="
+                ./img/location-map-mobile@1x.webp 1x,
+                ./img/location-map-mobile@2x.webp 2x
+              "
+              type="image/webp"
+            />
+            <source
+              media="(min-width: 1440px)"
+              srcset="
+                ./img/location-map-desktop@1x.jpg 1x,
+                ./img/location-map-desktop@2x.jpg 2x
+              "
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                ./img/location-map-tablet@1x.jpg 1x,
+                ./img/location-map-tablet@2x.jpg 2x
+              "
+            />
+            <img
+              class="contacts__picture-wrapper"
+              src="./img/location-map-mobile@1x.jpg"
+              alt="карта местонахождения Cat Energy"
+              srcset="./img/location-map-mobile@2x.jpg 2x"
+              loading="lazy"
+            />
+          </picture>
+        </noscript>
       </section>
 
       <section class="copyright">
+        <h2 class="visually-hidden">Копирайт и соцсети</h2>
         <div class="copyright__wrapper container">
-          <a class="copyright__logo logo">
-            <img
-              src="./img/logo-text.svg"
-              alt="Логотип Кэт энерджи"
-              class="logo__text copyright__logo-text"
-              width="128"
-              height="24"
-          /></a>
+          <a class="copyright__logo" href="./index.html">
+            <svg class="copyright__logo-text" width="128" height="24">
+              <use xlink:href="./img/sprite.svg#logo-footer"></use></svg
+          ></a>
           <ul class="copyright__socials socials">
             <li class="social__item">
-              <a href="#" class="social__link" aria-label="Вконтакте">
-                <svg width="28" height="22" class="social__link-icon">
+              <a class="social__link" href="#">
+                <span class="visually-hidden">Перейти во Вконтакте</span>
+                <svg
+                  class="social__link-icon"
+                  width="28"
+                  height="22"
+                  aria-hidden="true"
+                  focusable="false"
+                >
                   <use xlink:href="./img/sprite.svg#logo-vk"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a href="#" class="social__link" aria-label="Ютуб"
-                ><svg width="28" height="22" class="social__link-icon">
+              <a class="social__link" href="#"
+                ><span class="visually-hidden">Перейти во Ютуб</span>
+                <svg
+                  class="social__link-icon"
+                  width="28"
+                  height="22"
+                  aria-hidden="true"
+                  focusable="false"
+                >
                   <use xlink:href="./img/sprite.svg#logo-youtube"></use></svg
               ></a>
             </li>
             <li class="social__item">
-              <a href="#" class="social__link" aria-label="Телеграм"
-                ><svg width="28" height="22" class="social__link-icon">
+              <a class="social__link" href="#"
+                ><span class="visually-hidden">Перейти во Телеграм</span>
+                <svg
+                  class="social__link-icon"
+                  width="28"
+                  height="22"
+                  aria-hidden="true"
+                  focusable="false"
+                >
                   <use xlink:href="./img/sprite.svg#logo-tg"></use></svg
               ></a>
             </li>
@@ -596,13 +679,19 @@
             href="https://htmlacademy.ru/intensive/adaptive"
           >
             <span class="copyright__text">HTML Academy</span>
-            <svg width="27" height="34" class="copyright__academy">
+            <svg
+              class="copyright__academy"
+              width="27"
+              height="34"
+              aria-hidden="true"
+              focusable="false"
+            >
               <use xlink:href="./img/sprite.svg#logo-html-academy"></use>
             </svg>
           </a>
         </div>
       </section>
     </footer>
-    <script src="./js/script.js"></script>
+    <script src="./js/burger.js"></script>
   </body>
 </html>

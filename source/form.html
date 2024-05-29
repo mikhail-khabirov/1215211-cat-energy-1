@@ -4,19 +4,35 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="На этой странице вы можете оформить заказ на любую продукцию Cat Energy."
+    />
     <!-- favicons -->
     <link rel="icon" href="../favicon.ico" />
     <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon.png" />
     <link rel="manifest" href="./manifest.webmanifest" />
-    <!-- styles -->
+    <!-- styles and fonts-->
     <link rel="stylesheet" href="./css/style.min.css" />
+    <link
+      rel="preload"
+      href="./fonts/lato/Lato-Regular.woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="./fonts/oswald/oswaldregular.woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
     <title>HTML Academy: Кэт энерджи | Подбор программы</title>
   </head>
   <body class="page__body">
     <header class="page__header header">
       <div class="header__container container">
-        <a href="./index.html" class="logo"
+        <a class="logo" href="./index.html"
           ><picture>
             <source
               media="(min-width: 1440px)"
@@ -46,15 +62,15 @@
           <ul class="site-navigation__list">
             <li class="site-navigation__item">
               <a
-                href="./index.html"
                 class="site-navigation__link site-navigation__link--inner"
+                href="./index.html"
                 >главная</a
               >
             </li>
             <li class="site-navigation__item">
               <a
-                href="./catalog.html"
                 class="site-navigation__link site-navigation__link--inner"
+                href="./catalog.html"
                 >каталог продукции</a
               >
             </li>
@@ -66,11 +82,9 @@
             </li>
           </ul>
         </nav>
-        <button
-          class="site-navigation__button"
-          aria-label="Открыть меню навигации"
-          type="button"
-        ></button>
+        <button class="site-navigation__button" type="button">
+          <span class="visually-hidden">Открыть меню навинации</span>
+        </button>
       </div>
     </header>
 
@@ -91,11 +105,11 @@
           <fieldset class="cat-info__group cat-info__group--about-cat">
             <legend class="visually-hidden">Инфо о коте</legend>
             <p class="input">
-              <label for="name" class="input__label input__label--about-cat"
+              <label class="input__label input__label--about-cat" for="name"
                 >ИМЯ:*</label
               ><input
-                type="text"
                 class="input__field"
+                type="text"
                 name="name"
                 id="name"
                 value="БАРСИК"
@@ -103,11 +117,11 @@
               />
             </p>
             <p class="input">
-              <label for="weight" class="input__label input__label--about-cat"
+              <label class="input__label input__label--about-cat" for="weight"
                 >Вес (кг):*</label
               ><input
-                type="text"
                 class="input__field"
+                type="text"
                 name="weight"
                 id="weight"
                 value="7"
@@ -115,11 +129,11 @@
               />
             </p>
             <p class="input">
-              <label for="age" class="input__label input__label--about-cat"
+              <label class="input__label input__label--about-cat" for="age"
                 >Возраст (лет):</label
               ><input
-                type="text"
                 class="input__field"
+                type="text"
                 name="age"
                 id="age"
                 value="7"
@@ -131,40 +145,40 @@
             <legend class="visually-hidden">Выбор программы</legend>
             <p class="input">
               <input
-                type="radio"
                 class="input__radio visually-hidden"
+                type="radio"
                 name="program"
                 id="lose-weight"
                 value="lose-weight"
                 checked
               />
               <label
-                for="lose-weight"
                 class="input__label input__label--program"
+                for="lose-weight"
                 >похудение</label
               >
             </p>
             <p class="input">
               <input
-                type="radio"
                 class="input__radio visually-hidden"
+                type="radio"
                 name="program"
                 id="gain-weight"
                 value="gain-weight"
               /><label
-                for="gain-weight"
                 class="input__label input__label--program"
+                for="gain-weight"
                 >Набор массы</label
               >
             </p>
             <p class="input">
               <input
-                type="radio"
                 class="input__radio visually-hidden"
+                type="radio"
                 name="program"
                 id="not-sure"
                 value="not-sure"
-              /><label for="not-sure" class="input__label input__label--program"
+              /><label class="input__label input__label--program" for="not-sure"
                 >Не знаю (Нужен ваш совет)</label
               >
             </p>
@@ -174,28 +188,42 @@
               Контактные данные (владельца кота)
             </legend>
             <p class="cat-info__input-contact input">
-              <label for="e-mail" class="input__label input__label--contact"
+
+              <label class="input__label input__label--contact" for="e-mail"
                 >E-mail:*</label
               ><input
-                type="text"
                 class="input__field"
+                type="text"
                 name="e-mail"
                 id="e-mail"
                 value="kuklachev@gmail.com"
                 placeholder="Введите свой e-mail"
+                required
               />
+              <span class="cat-info__input-contact-icon">
+                <svg width="20" height="20" viewBox="0 0 20 20">
+                  <path d="M1.50034 8.5V16.5H18.5041V8.5M1.50034 3.5H18.5041V5.5L10.0022 11.5L1.50034 5.5V3.5Z" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
             </p>
             <p class="cat-info__input-contact input">
-              <label for="phone" class="input__label input__label--contact"
+
+              <label class="input__label input__label--contact" for="phone"
                 >Телефон:*</label
               ><input
-                type="text"
                 class="input__field"
+                type="text"
                 name="phone"
                 id="phone"
                 value="8 (960) 900-60-90"
                 placeholder="Введите свой телефон"
+                required
               />
+              <span class="cat-info__input-contact-icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.0022 10H18.5041M18.5041 10L16.0036 7.5M18.5041 10L16.0036 12.5M8.50191 2.5V7.5H5.50124V12.5H8.50191V17.5H6.00135C4.50102 17.5 3.50079 16.5 3.50079 15V5C3.50079 3.5 4.50102 2.5 6.00135 2.5H8.50191Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+              </span>
             </p>
           </fieldset>
           <fieldset class="cat-info__group cat-info__group--comment">
@@ -214,48 +242,50 @@
             <div class="cat-info__wrapper">
               <p class="input">
                 <input
-                  type="checkbox"
                   class="input__checkbox visually-hidden"
+                  type="checkbox"
                   name="sweetener"
                   id="sweetener"
                   checked
-                /><label for="sweetener" class="input__label input__label--add"
+                /><label class="input__label input__label--add" for="sweetener"
                   >сахарозаменитель</label
                 >
               </p>
               <p class="input">
                 <input
-                  type="checkbox"
                   class="input__checkbox visually-hidden"
+                  type="checkbox"
                   name="water"
                   id="water"
-                /><label for="water" class="input__label input__label--add"
+                /><label class="input__label input__label--add" for="water"
                   >питьевая вода</label
                 >
               </p>
               <p class="input">
                 <input
-                  type="checkbox"
                   class="input__checkbox visually-hidden"
+                  type="checkbox"
                   name="milk"
                   id="milk"
-                /><label for="milk" class="input__label input__label--add"
+                /><label class="input__label input__label--add" for="milk"
                   >молоко</label
                 >
               </p>
               <p class="input">
                 <input
-                  type="checkbox"
                   class="input__checkbox visually-hidden"
+                  type="checkbox"
                   name="vitamins"
                   id="vitamins"
-                /><label for="vitamins" class="input__label input__label--add"
+                /><label class="input__label input__label--add" for="vitamins"
                   >витамины</label
                 >
               </p>
             </div>
           </fieldset>
-          <button class="cat-info__button button">отправить заявку</button>
+          <button class="cat-info__button button" type="submit">
+            отправить заявку
+          </button>
           <p class="cat-info__text">* — Обязательные поля</p>
         </form>
       </section>
@@ -280,35 +310,99 @@
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
+        <noscript>
+          <picture>
+            <source
+              media="(min-width: 1440px)"
+              srcset="
+                ./img/location-map-desktop@1x.webp 1x,
+                ./img/location-map-desktop@2x.webp 2x
+              "
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                ./img/location-map-tablet@1x.webp 1x,
+                ./img/location-map-tablet@2x.webp 2x
+              "
+            />
+            <source
+              srcset="
+                ./img/location-map-mobile@1x.webp 1x,
+                ./img/location-map-mobile@2x.webp 2x
+              "
+              type="image/webp"
+            />
+            <source
+              media="(min-width: 1440px)"
+              srcset="
+                ./img/location-map-desktop@1x.jpg 1x,
+                ./img/location-map-desktop@2x.jpg 2x
+              "
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                ./img/location-map-tablet@1x.jpg 1x,
+                ./img/location-map-tablet@2x.jpg 2x
+              "
+            />
+            <img
+              class="contacts__picture-wrapper"
+              src="./img/location-map-mobile@1x.jpg"
+              alt="карта местонахождения Cat Energy"
+              srcset="./img/location-map-mobile@2x.jpg 2x"
+              loading="lazy"
+            />
+          </picture>
+        </noscript>
       </section>
 
       <section class="copyright">
+        <h2 class="visually-hidden">Копирайт и соцсети</h2>
         <div class="copyright__wrapper container">
-          <a class="copyright__logo logo">
-            <img
-              src="./img/logo-text.svg"
-              alt="Логотип Кэт энерджи"
-              class="logo__text copyright__logo-text"
-              width="128"
-              height="24"
-          /></a>
+          <a class="copyright__logo" href="./index.html">
+            <svg class="copyright__logo-text" width="128" height="24">
+              <use xlink:href="./img/sprite.svg#logo-footer"></use></svg
+          ></a>
           <ul class="copyright__socials socials">
             <li class="social__item">
-              <a href="#" class="social__link" aria-label="Вконтакте">
-                <svg width="28" height="22" class="social__link-icon">
+              <a class="social__link" href="#">
+                <span class="visually-hidden">Перейти во Вконтакте</span>
+                <svg
+                  class="social__link-icon"
+                  width="28"
+                  height="22"
+                  aria-hidden="true"
+                  focusable="false"
+                >
                   <use xlink:href="./img/sprite.svg#logo-vk"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a href="#" class="social__link" aria-label="Ютуб"
-                ><svg width="28" height="22" class="social__link-icon">
+              <a class="social__link" href="#"
+                ><span class="visually-hidden">Перейти во Ютуб</span>
+                <svg
+                  class="social__link-icon"
+                  width="28"
+                  height="22"
+                  aria-hidden="true"
+                  focusable="false"
+                >
                   <use xlink:href="./img/sprite.svg#logo-youtube"></use></svg
               ></a>
             </li>
             <li class="social__item">
-              <a href="#" class="social__link" aria-label="Телеграм"
-                ><svg width="28" height="22" class="social__link-icon">
+              <a class="social__link" href="#"
+                ><span class="visually-hidden">Перейти во Телеграм</span>
+                <svg
+                  class="social__link-icon"
+                  width="28"
+                  height="22"
+                  aria-hidden="true"
+                  focusable="false"
+                >
                   <use xlink:href="./img/sprite.svg#logo-tg"></use></svg
               ></a>
             </li>
@@ -318,13 +412,19 @@
             href="https://htmlacademy.ru/intensive/adaptive"
           >
             <span class="copyright__text">HTML Academy</span>
-            <svg width="27" height="34" class="copyright__academy">
+            <svg
+              class="copyright__academy"
+              width="27"
+              height="34"
+              aria-hidden="true"
+              focusable="false"
+            >
               <use xlink:href="./img/sprite.svg#logo-html-academy"></use>
             </svg>
           </a>
         </div>
       </section>
     </footer>
-    <script src="./js/script.js"></script>
+    <script src="./js/burger.js"></script>
   </body>
 </html>

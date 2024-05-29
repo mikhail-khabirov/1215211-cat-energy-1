@@ -2,10 +2,20 @@
   display: flex;
   align-items: center;
   text-decoration: none;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .logo__img {
   margin-right: 56px;
+  transition: opacity 0.3s ease;
 
   @media (min-width: $tablet-width) {
     width: 60px;
@@ -23,6 +33,7 @@
 .logo__text {
   width: 101px;
   height: 18px;
+  transition: opacity 0.3s ease;
 
   @media (min-width: $desktop-width) {
     width: 118px;

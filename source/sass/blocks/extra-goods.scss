@@ -184,21 +184,20 @@
   position: relative;
   min-height: 290px;
   margin: 0 auto;
+  background-image: url("../../img/cat-background-catalog.jpg");
   background-image: linear-gradient(
       fade-out($basic-green, 0.15),
       fade-out($basic-green, 0.15)
     ),
-    url("../../img/cat-background-catalog.jpg");
+    image-set(
+      url("../../img/cat-background-catalog@2x.webp") 2x,
+      url("../../img/cat-background-catalog.webp") 1x,
+      url("../../img/cat-background-catalog@2x.jpg") 2x,
+      url("../../img/cat-background-catalog.jpg") 1x
+    );
   background-repeat: no-repeat;
   background-size: cover, cover;
-
-  @media (min-resolution: 2dppx) {
-    background-image: linear-gradient(
-        fade-out($basic-green, 0.15),
-        fade-out($basic-green, 0.15)
-      ),
-      url("../../img/cat-background-catalog@2x.jpg");
-  }
+  background-color: rgba(104, 183, 56, 0.85);
 
   &::before {
     @include pseudo-elem(78px, 80px, 58px, 50%);
@@ -215,42 +214,38 @@
   }
 
   @media (min-width: $tablet-width) {
+    background-image: url("../../img/cat-background-catalog-tablet.jpg");
     background-image: linear-gradient(
         fade-out($basic-green, 0.15),
         fade-out($basic-green, 0.15)
       ),
-      url("../../img/cat-background-catalog-tablet.jpg");
+      image-set(
+        url("../../img/cat-background-catalog-tablet@2x.webp") 2x,
+        url("../../img/cat-background-catalog-tablet.webp") 1x,
+        url("../../img/cat-background-catalog-tablet@2x.jpg") 2x,
+        url("../../img/cat-background-catalog-tablet.jpg") 1x
+      );
     background-size: cover, cover;
     min-height: 200px;
-
-    @media (min-resolution: 2dppx) {
-      background-image: linear-gradient(
-          fade-out($basic-green, 0.15),
-          fade-out($basic-green, 0.15)
-        ),
-        url("../../img/cat-background-catalog-tablet@2x.jpg");
-    }
   }
 
   @media (min-width: $desktop-width) {
+    background-image: url("../../img/cat-background-catalog.jpg");
     background-image: linear-gradient(
         fade-out($basic-green, 0.15),
         fade-out($basic-green, 0.15)
       ),
-      url("../../img/cat-background-catalog.jpg");
+      image-set(
+        url("../../img/cat-background-catalog@2x.webp") 2x,
+        url("../../img/cat-background-catalog.webp") 1x,
+        url("../../img/cat-background-catalog@2x.jpg") 2x,
+        url("../../img/cat-background-catalog.jpg") 1x
+      );
     width: 245px;
     min-height: 288px;
     display: flex;
     justify-content: center;
     margin: 0;
-
-    @media (min-resolution: 2dppx) {
-      background-image: linear-gradient(
-          fade-out($basic-green, 0.15),
-          fade-out($basic-green, 0.15)
-        ),
-        url("../../img/cat-background-catalog@2x.jpg");
-    }
   }
 }
 
@@ -265,18 +260,14 @@
 
   @media (min-width: $tablet-width) {
     padding: 0;
-    position: absolute;
-    top: 71px;
-    right: 125px;
+    display: inline-block;
+    margin: 71px 0 0 421px;
     text-align: left;
   }
 
   @media (min-width: $desktop-width) {
     padding: 0;
-    margin: 0;
+    margin: 185px 0 0;
     text-align: center;
-    top: 185px;
-    right: 50%;
-    transform: translateX(50%);
   }
 }

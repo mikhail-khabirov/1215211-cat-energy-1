@@ -9,11 +9,30 @@
   text-transform: uppercase;
   border: none;
   cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: $basic-green-2;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: $basic-green-2;
+  }
 }
 
 .button--show-all {
   background-color: $basic-grey;
   color: $special-dark-grey;
+
+  &:hover {
+    background-color: $special-grey-2;
+  }
+
+  &:active {
+    background-color: $special-grey-2;
+    color: $special-dark-grey;
+  }
 
   @media (min-width: $desktop-width) {
     padding-left: 30px;

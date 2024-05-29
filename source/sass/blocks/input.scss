@@ -46,12 +46,14 @@
   }
 }
 
-.input__radio:checked + .input__label--program::after {
+.input__radio:checked + .input__label::after,
+.input__checkbox:checked + .input__label::after {
   display: block;
 }
 
-.input__checkbox:checked + .input__label::after {
-  display: block;
+.input__radio:focus + .input__label::before,
+.input__checkbox:focus + .input__label::before {
+  outline: 2px solid $special-dark-grey;
 }
 
 .input__field {
@@ -63,6 +65,27 @@
   padding: 13px 15px;
   border: 1px solid #e7e7e7;
   flex-grow: 1;
+
+  &:hover {
+    border-color: $special-grey;
+  }
+
+  &:focus {
+    outline: none;
+    border: 2px solid $special-dark-grey;
+  }
+
+  &:focus + .cat-info__input-contact-icon path {
+    stroke: $basic-green;
+  }
+
+  &:invalid {
+    border: 2px solid $status-error;
+  }
+
+  &:invalid + .cat-info__input-contact-icon path {
+    stroke: $status-error;
+  }
 
   @media (min-width: $tablet-width) {
     padding: 11px 20px;
@@ -92,9 +115,7 @@
 }
 
 .input__label--add {
-  @media (min-width: $tablet-width) {
-    margin-left: 20px;
-  }
+  color: $basic-black;
 
   &::before {
     content: "";
@@ -127,10 +148,38 @@
   line-height: 1.12;
   text-transform: uppercase;
   color: $special-dark-grey;
+  transition: border 0.3s ease;
+
+  &:hover {
+    border: 1px solid $special-grey;
+  }
+
+  &:focus {
+    border: 2px solid $special-dark-grey;
+  }
+
+  &:invalid {
+    border: 2px solid $status-error;
+  }
 
   @media (min-width: $tablet-width) {
     padding: 11px 20px;
     font-size: 20px;
     min-height: 175px;
+  }
+}
+
+.input__label--program,
+.input__label--add {
+  &:hover::before {
+    border: 1px solid #bababa;
+  }
+
+  &:active::before {
+    border: 1px solid #bababa;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
