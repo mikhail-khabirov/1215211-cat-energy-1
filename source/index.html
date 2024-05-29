@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="./css/style.css" />
     <title>HTML Academy: Кэт энерджи</title>
   </head>
-  <body class="page__body">
+  <body class="page__body" >
+
     <header class="page__header header">
       <div class="header__container container">
         <a class="logo"
@@ -75,6 +76,9 @@
           </h1>
           <p class="hero__slogan">Занялся собой? Займись котом!</p>
           <picture>
+            <source media="(min-width: 1440px)" srcset="./img/index-can-desktop@1x.webp 1x, ./img/index-can-desktop@2x.webp 2x">
+            <source media="(min-width: 768px)" srcset="./img/index-can-tablet@1x.webp 1x, ./img/index-can-tablet@2x.webp 2x">
+            <source srcset="./img/index-can-mobile.webp 1x, ./img/index-can-mobile@2x.webp 2x">
             <source
               media="(min-width: 1440px)"
               srcset="
@@ -199,10 +203,32 @@
         <div class="example__picture-wrapper">
           <div class="example__image example__image--before"></div>
           <div class="example__image example__image--after"></div>
-          <button
-            class="example__toggle"
-            aria-label="передвинуть слайд"
-          ></button>
+          <button class="example__toggle-button">
+            <svg
+              class="example__toggle-icon"
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect x="1" y="1" width="38" height="38" rx="19" fill="white" />
+              <rect
+                x="1"
+                y="1"
+                width="38"
+                height="38"
+                rx="19"
+                stroke="#666666"
+                stroke-width="2"
+              />
+              <path d="M16 11L8 20L16 29V11Z" fill="#666666" />
+              <path d="M32 20L24 11V29L32 20Z" fill="#666666" />
+            </svg>
+
+          </button>
+
+
         </div>
       </section>
     </main>
@@ -266,13 +292,9 @@
             href="https://htmlacademy.ru/intensive/adaptive"
           >
             <span class="copyright__text">HTML Academy</span>
-            <img
-              src="./img/logo-htmlacademy.svg"
-              alt="Лого HTML Академия"
-              class="copyright__academy"
-              width="27"
-              height="34"
-            />
+            <svg width="27" height="34" class="copyright__academy">
+              <use xlink:href="./img/sprite.svg#logo-htmlacademy"></use>
+            </svg>
           </a>
         </div>
       </section>

@@ -22,16 +22,17 @@
   height: 22px;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: $special-grey-3;
 
   &--vk {
-    background-image: url("../../img/vk-logo.svg");
+    mask-image: url("../../img/sprite.svg#vk-logo");
   }
 
   &--youtube {
-    background-image: url("../../img/youtube-logo.svg");
+    mask-image: url("../../img/sprite.svg#youtube-logo");
   }
 
   &--telegram {
-    background-image: url("../../img/tg-logo.svg");
+    mask-image: url("../../img/sprite.svg#tg-logo");
   }
 }

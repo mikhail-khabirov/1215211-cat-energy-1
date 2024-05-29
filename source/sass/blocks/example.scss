@@ -237,17 +237,22 @@
   }
 }
 
-.example__toggle {
+.example__toggle-button {
   position: absolute;
-  width: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  padding: 0;
+  width: 4px;
   height: 256px;
-  background-image: url("../../img/curtain.svg");
-  background-color: transparent;
   border: none;
+  background-color: $special-grey-3;
+
   cursor: pointer;
 
   @media (min-width: $tablet-width) {
-    background-image: url("../../img/curtain-long.svg");
     height: 512px;
     top: -135px;
   }
