@@ -20,6 +20,7 @@
   color: $special-dark-grey;
 
   @media (min-width: $tablet-width) {
+    gap: 19px;
     font-size: 20px;
   }
 
@@ -30,6 +31,12 @@
     height: 30px;
     border-radius: 50%;
     border: 1px solid $special-grey;
+
+    @media (min-width: $tablet-width) {
+      width: 40px;
+      height: 40px;
+      margin-top: -1px;
+    }
   }
 
   &--program::after {
@@ -43,6 +50,13 @@
     top: 50%;
     left: 9px;
     transform: translateY(-50%);
+
+    @media (min-width: $tablet-width) {
+      width: 18px;
+      height: 18px;
+      top: 46%;
+      left: 10px;
+    }
   }
 }
 
@@ -57,6 +71,7 @@
 }
 
 .input__field {
+  height: 45px;
   font-family: $second-family;
   font-size: 16px;
   line-height: 1.12;
@@ -91,6 +106,7 @@
     padding: 11px 20px;
     font-size: 20px;
     line-height: 1.44;
+    height: 52px;
   }
 }
 
@@ -99,10 +115,6 @@
 }
 
 .input__label--program {
-  @media (min-width: $tablet-width) {
-    margin-left: 20px;
-  }
-
   @media (min-width: $desktop-width) {
     height: 40px;
     display: flex;
@@ -123,6 +135,11 @@
     width: 30px;
     height: 30px;
     border: 1px solid $special-grey;
+
+    @media (min-width: $tablet-width) {
+      width: 40px;
+      height: 40px;
+    }
   }
 
   &::after {
@@ -135,6 +152,14 @@
     top: 50%;
     left: 6px;
     transform: translateY(-50%);
+
+    @media (min-width: $tablet-width) {
+      width: 26px;
+      height: 26px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
   }
 }
 
@@ -163,9 +188,13 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 11px 20px;
+    padding: 15px 20px;
     font-size: 20px;
     min-height: 175px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 11px 20px;
   }
 }
 

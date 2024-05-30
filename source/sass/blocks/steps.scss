@@ -26,7 +26,7 @@
   @media (min-width: $tablet-width) {
     min-width: 629px;
     justify-content: flex-start;
-    padding-bottom: 47px;
+    padding-bottom: 45px;
     margin: 0;
     gap: 37px 140px;
   }
@@ -103,6 +103,12 @@
 
   &--alarm::before {
     background-image: url("../../img/alarm.svg");
+  }
+
+  &--boil .steps__text {
+    @media (min-width: $tablet-width) {
+      transform: translate(-2px, -1px);
+    }
   }
 
   @media (min-width: $tablet-width) {

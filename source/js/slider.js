@@ -10,7 +10,7 @@ toggleButton.onmousedown = function (e) {
   document.addEventListener('mousemove', onMouseMove);
   document.addEventListener('mouseup', onMouseUp);
 
-  
+
   function onMouseMove(e) {
     let newLeft = e.clientX - shiftX - range.getBoundingClientRect().left;
     let newRight = e.clientX - shiftX - range.getBoundingClientRect().right;
@@ -37,8 +37,8 @@ toggleButton.onmousedown = function (e) {
     toggleButton.style.left = newLeft + 'px';
     toggleButton.style.right = newRight + 'px';
 
-    leftImage.style.width = newLeft  + 'px';
-    rightImage.style.width = -newRight + 'px';
+    leftImage.style.width = (newLeft + 4)  + 'px';
+    rightImage.style.width = (-newRight + 4) + 'px';
 
   }
 

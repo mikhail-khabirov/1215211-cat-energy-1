@@ -11,6 +11,14 @@
 
   @media (min-width: $desktop-width) {
     max-width: 500px;
+
+    &--form {
+      transform: translateX(-3px);
+    }
+
+    &--catalog {
+      transform: translateX(-4px);
+    }
   }
 }
 
@@ -72,8 +80,28 @@
     }
 
     @media (min-width: $desktop-width) {
-      text-underline-offset: 6px;
+      text-underline-offset: 8px;
       text-decoration-color: #ffffff;
+    }
+  }
+
+  &--current-catalog {
+    @media (min-width: $tablet-width) {
+      text-underline-offset: 6px;
+    }
+
+    @media (min-width: $desktop-width) {
+      text-underline-offset: 8px;
+    }
+  }
+
+  &--current-form {
+    @media (min-width: $tablet-width) {
+      text-underline-offset: 6px;
+    }
+
+    @media (min-width: $desktop-width) {
+      text-underline-offset: 8px;
     }
   }
 }
@@ -92,8 +120,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-image: url("../../img/menu-burger.svg");
-  top: 21px;
-  right: 22px;
+  top: 20px;
+  right: 20px;
   cursor: pointer;
 
   &--is-pressed {

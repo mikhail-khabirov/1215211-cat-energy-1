@@ -24,3 +24,19 @@
     padding-bottom: 0;
   }
 }
+
+.header__logo {
+  width: 200px;
+
+  @media (min-width: $tablet-width) {
+    width: 174px;
+
+    &--form {
+      width: 177px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 202px;
+  }
+}
