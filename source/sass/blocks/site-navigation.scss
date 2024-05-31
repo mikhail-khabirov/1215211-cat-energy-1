@@ -120,9 +120,19 @@
   background-repeat: no-repeat;
   background-position: center;
   background-image: url("../../img/menu-burger.svg");
-  top: 20px;
-  right: 20px;
+  top: 21px;
+  right: 22px;
   cursor: pointer;
+
+  &--form {
+    top: 20px;
+    right: 20px;
+  }
+
+  &--catalog {
+    top: 20px;
+    right: 21px;
+  }
 
   &--is-pressed {
     width: 22px;
