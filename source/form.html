@@ -9,7 +9,7 @@
       content="На этой странице вы можете оформить заказ на любую продукцию Cat Energy."
     />
     <!-- favicons -->
-    <link rel="icon" href="../favicon.ico" />
+    <link rel="icon" href="./favicon.ico" />
     <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon.png" />
     <link rel="manifest" href="./manifest.webmanifest" />
@@ -30,7 +30,7 @@
     <title>HTML Academy: Кэт энерджи | Подбор программы</title>
   </head>
   <body class="page__body">
-    <header class="page__header header">
+    <header class="page__header page__header--form header">
       <div class="header__container container">
         <a class="header__logo header__logo--form logo" href="./index.html"
           ><picture>
@@ -45,7 +45,7 @@
             <img
               class="logo__img"
               src="./img/logo-pic-mobile.svg"
-              alt="логотип Кэт энерджи"
+              alt="логотип Кэт энерджи."
               width="33"
               height="38"
             />
@@ -76,16 +76,20 @@
             </li>
             <li class="site-navigation__item">
               <a
-                class="site-navigation__link site-navigation__link--current
-                site-navigation__link--current-form
-                site-navigation__link--inner"
+                class="site-navigation__link site-navigation__link--current site-navigation__link--current-form site-navigation__link--inner"
                 >подбор программы</a
               >
             </li>
           </ul>
         </nav>
-        <button class="site-navigation__button site-navigation__button--form" type="button">
-          <span class="visually-hidden">Открыть меню навинации</span>
+        <button
+          class="site-navigation__button site-navigation__button--form"
+          type="button"
+          aria-label="Открыть меню навинации"
+        >
+          <span class="site-navigation__button-line"></span>
+          <span class="site-navigation__button-line"></span>
+          <span class="site-navigation__button-line"></span>
         </button>
       </div>
     </header>
@@ -116,6 +120,7 @@
                 id="name"
                 value="БАРСИК"
                 placeholder="Введите имя кота"
+                required
               />
             </p>
             <p class="input">
@@ -128,6 +133,7 @@
                 id="weight"
                 value="7"
                 placeholder="Введите вес кота"
+                required
               />
             </p>
             <p class="input">
@@ -190,12 +196,11 @@
               Контактные данные (владельца кота)
             </legend>
             <p class="cat-info__input-contact input">
-
               <label class="input__label input__label--contact" for="e-mail"
                 >E-mail:*</label
               ><input
                 class="input__field"
-                type="text"
+                type="email"
                 name="e-mail"
                 id="e-mail"
                 value="kuklachev@gmail.com"
@@ -204,17 +209,20 @@
               />
               <span class="cat-info__input-contact-icon">
                 <svg width="20" height="20" viewBox="0 0 20 20">
-                  <path d="M1.50034 8.5V16.5H18.5041V8.5M1.50034 3.5H18.5041V5.5L10.0022 11.5L1.50034 5.5V3.5Z" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path
+                    d="M1.50034 8.5V16.5H18.5041V8.5M1.50034 3.5H18.5041V5.5L10.0022 11.5L1.50034 5.5V3.5Z"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                 </svg>
               </span>
             </p>
             <p class="cat-info__input-contact input">
-
               <label class="input__label input__label--contact" for="phone"
                 >Телефон:*</label
               ><input
                 class="input__field"
-                type="text"
+                type="tel"
                 name="phone"
                 id="phone"
                 value="8 (960) 900-60-90"
@@ -222,9 +230,20 @@
                 required
               />
               <span class="cat-info__input-contact-icon">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M10.0022 10H18.5041M18.5041 10L16.0036 7.5M18.5041 10L16.0036 12.5M8.50191 2.5V7.5H5.50124V12.5H8.50191V17.5H6.00135C4.50102 17.5 3.50079 16.5 3.50079 15V5C3.50079 3.5 4.50102 2.5 6.00135 2.5H8.50191Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.0022 10H18.5041M18.5041 10L16.0036 7.5M18.5041 10L16.0036 12.5M8.50191 2.5V7.5H5.50124V12.5H8.50191V17.5H6.00135C4.50102 17.5 3.50079 16.5 3.50079 15V5C3.50079 3.5 4.50102 2.5 6.00135 2.5H8.50191Z"
+                    stroke="black"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
               </span>
             </p>
           </fieldset>
@@ -297,14 +316,17 @@
       <section class="contacts contacts--inner">
         <div class="contacts__wrapper">
           <h2 class="visually-hidden">Наши контакты</h2>
-          <p class="contacts__title">приглашаем <br> к сотрудничеству дилеров!</p>
+          <p class="contacts__title">
+            приглашаем <br />
+            к сотрудничеству дилеров!
+          </p>
           <p class="contacts__address">
             ул. Большая Конюшенная, д. 19/8
             <span class="contacts__city">Санкт-Петербург</span>
           </p>
         </div>
         <iframe
-          class="contacts__picture-wrapper contacts__map"
+          class="contacts__picture-wrapper contacts__map contacts__map contacts__map--no-js"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257197507!2d30.32047247624954!3d59.93871916209469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1716359340768!5m2!1sru!2sru"
           width="400"
           height="300"
@@ -352,7 +374,7 @@
             <img
               class="contacts__picture-wrapper"
               src="./img/location-map-mobile@1x.jpg"
-              alt="карта местонахождения Cat Energy"
+              alt="карта местонахождения Cat Energy."
               srcset="./img/location-map-mobile@2x.jpg 2x"
               loading="lazy"
             />
@@ -362,7 +384,7 @@
 
       <section class="copyright">
         <h2 class="visually-hidden">Копирайт и соцсети</h2>
-        <div class="copyright__wrapper copyright__wrapper--form  container">
+        <div class="copyright__wrapper copyright__wrapper--form container">
           <a class="copyright__logo" href="./index.html">
             <svg class="copyright__logo-text" width="128" height="24">
               <use xlink:href="./img/sprite.svg#logo-footer"></use></svg

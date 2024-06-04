@@ -27,6 +27,13 @@
     z-index: 1;
     width: 100%;
     margin-top: 55px;
+
+    &--catalog,
+    &--form {
+      position: static;
+      left: 0;
+      transform: none;
+    }
   }
 }
 

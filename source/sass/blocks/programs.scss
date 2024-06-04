@@ -49,7 +49,7 @@
   line-height: 1.54;
   text-transform: uppercase;
 
-  width: 230px;
+  width: 220px;
   margin: 9px 0 29px 70px;
 
   display: flex;
@@ -114,7 +114,7 @@
 }
 
 .programs__card-title--cat-sit::after {
-  background-image: url("../../img/program-cat-sit.svg");
+  background-image: url("../img/program-cat-sit.svg");
   width: 36px;
   height: 50px;
   top: 20px;
@@ -136,7 +136,7 @@
 }
 
 .programs__card-title--cat-walk::after {
-  background-image: url("../../img/program-cat-walk.svg");
+  background-image: url("../img/program-cat-walk.svg");
   width: 67px;
   height: 28px;
   top: 34px;
@@ -204,7 +204,7 @@
     width: 32px;
     height: 12px;
     margin-left: 16px;
-    background-image: url("../../img/catalog-arrow.svg");
+    background-image: url("../img/catalog-arrow.svg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

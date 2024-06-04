@@ -86,6 +86,12 @@
     width: 570px;
     padding-bottom: 70px;
   }
+
+  .input__field {
+    &:invalid {
+      border: 2px solid $status-error;
+    }
+  }
 }
 
 .cat-info__group--program {
@@ -153,6 +159,14 @@
     @media (min-width: $desktop-width) {
       width: 569px;
     }
+  }
+
+  .input__field:invalid {
+    border: 2px solid $status-error;
+  }
+
+  .input__field:invalid + .cat-info__input-contact-icon path {
+    stroke: $status-error;
   }
 }
 

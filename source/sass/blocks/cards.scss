@@ -138,6 +138,10 @@
   }
 }
 
+.cards__link {
+  text-decoration: none;
+}
+
 .cards__image {
   object-fit: cover;
   width: 140px;
@@ -237,6 +241,9 @@
 }
 
 .cards__button {
+  text-decoration: none;
+  text-align: center;
+
   @media (min-width: $tablet-width) {
     width: 250px;
     padding-top: 8px;

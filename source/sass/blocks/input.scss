@@ -29,6 +29,7 @@
     display: block;
     width: 30px;
     height: 30px;
+    flex-shrink: 0;
     border-radius: 50%;
     border: 1px solid $special-grey;
 
@@ -65,8 +66,8 @@
   display: block;
 }
 
-.input__radio:focus + .input__label::before,
-.input__checkbox:focus + .input__label::before {
+.input__radio:focus-visible + .input__label::before,
+.input__checkbox:focus-visible + .input__label::before {
   outline: 2px solid $special-dark-grey;
 }
 
@@ -85,21 +86,13 @@
     border-color: $special-grey;
   }
 
-  &:focus {
+  &:focus-visible {
     outline: none;
     border: 2px solid $special-dark-grey;
   }
 
-  &:focus + .cat-info__input-contact-icon path {
+  &:focus-visible + .cat-info__input-contact-icon path {
     stroke: $basic-green;
-  }
-
-  &:invalid {
-    border: 2px solid $status-error;
-  }
-
-  &:invalid + .cat-info__input-contact-icon path {
-    stroke: $status-error;
   }
 
   @media (min-width: $tablet-width) {
@@ -135,6 +128,7 @@
     display: block;
     width: 30px;
     height: 30px;
+    flex-shrink: 0;
     border: 1px solid $special-grey;
 
     @media (min-width: $tablet-width) {
@@ -149,7 +143,7 @@
     display: none;
     width: 18px;
     height: 14px;
-    background-image: url("../../img/checkbox.svg");
+    background-image: url("../img/checkbox.svg");
     top: 50%;
     left: 6px;
     transform: translateY(-50%);
@@ -180,12 +174,8 @@
     border: 1px solid $special-grey;
   }
 
-  &:focus {
+  &:focus-visible {
     border: 2px solid $special-dark-grey;
-  }
-
-  &:invalid {
-    border: 2px solid $status-error;
   }
 
   @media (min-width: $tablet-width) {
@@ -201,6 +191,8 @@
 
 .input__label--program,
 .input__label--add {
+  cursor: pointer;
+
   &:hover::before {
     border: 1px solid #bababa;
   }

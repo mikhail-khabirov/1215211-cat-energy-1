@@ -90,19 +90,19 @@
   }
 
   &--leaf::before {
-    background-image: url("../../img/leaf.svg");
+    background-image: url("../img/leaf.svg");
   }
 
   &--boil::before {
-    background-image: url("../../img/boil.svg");
+    background-image: url("../img/boil.svg");
   }
 
   &--eat::before {
-    background-image: url("../../img/eat.svg");
+    background-image: url("../img/eat.svg");
   }
 
   &--alarm::before {
-    background-image: url("../../img/alarm.svg");
+    background-image: url("../img/alarm.svg");
   }
 
   &--boil .steps__text {

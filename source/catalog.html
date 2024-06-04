@@ -9,7 +9,7 @@
       content="На этой странице вы можете ознакомиться с ассортиментом продукции Cat Energy."
     />
     <!-- favicons -->
-    <link rel="icon" href="../favicon.ico" />
+    <link rel="icon" href="./favicon.ico" />
     <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon.png" />
     <link rel="manifest" href="./manifest.webmanifest" />
@@ -30,7 +30,7 @@
     <title>HTML Academy: Кэт энерджи | Каталог продукции</title>
   </head>
   <body class="page__body">
-    <header class="page__header header">
+    <header class="page__header page__header--catalog header">
       <div class="header__container container">
         <a class="header__logo logo" href="./index.html"
           ><picture>
@@ -45,7 +45,7 @@
             <img
               class="logo__img"
               src="./img/logo-pic-mobile.svg"
-              alt="логотип Кэт энерджи"
+              alt="логотип Кэт энерджи."
               width="33"
               height="38"
             />
@@ -82,8 +82,14 @@
             </li>
           </ul>
         </nav>
-        <button class="site-navigation__button site-navigation__button--catalog" type="button">
-          <span class="visually-hidden">Открыть меню навинации</span>
+        <button
+          class="site-navigation__button site-navigation__button--catalog"
+          type="button"
+          aria-label="Открыть меню навинации"
+        >
+          <span class="site-navigation__button-line"></span>
+          <span class="site-navigation__button-line"></span>
+          <span class="site-navigation__button-line"></span>
         </button>
       </div>
     </header>
@@ -95,40 +101,45 @@
           <ul class="cards">
             <li class="cards__item">
               <div class="cards__wrapper">
-                <picture>
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      ./img/cat-food-500-chicken-tablet@1x.webp 1x,
-                      ./img/cat-food-500-chicken-tablet@2x.webp 2x
-                    "
-                  />
-                  <source
-                    srcset="
-                      ./img/cat-food/cat-food-500-chicken.webp 1x,
-                      ./img/cat-food-500-chicken@2x.webp       2x
-                    "
-                    type="image/webp"
-                  />
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      ./img/cat-food-500-chicken-tablet@1x.png 1x,
-                      ./img/cat-food-500-chicken-tablet@2x.png 2x
-                    "
-                  />
-                  <img
-                    class="cards__image"
-                    src="./img/cat-food/cat-food-500-chicken.png"
-                    alt="оранжевая банка с едой"
-                    width="140"
-                    height="107"
-                    srcset="./img/cat-food-500-chicken@2x.png 2x"
-                  />
-                </picture>
+                <a class="cards__link" href="./cat-energy-pro-500-desc.html">
+                  <picture>
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/cat-food-500-chicken-tablet@1x.webp 1x,
+                        ./img/cat-food-500-chicken-tablet@2x.webp 2x
+                      "
+                    />
+                    <source
+                      srcset="
+                        ./img/cat-food/cat-food-500-chicken.webp 1x,
+                        ./img/cat-food-500-chicken@2x.webp       2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/cat-food-500-chicken-tablet@1x.png 1x,
+                        ./img/cat-food-500-chicken-tablet@2x.png 2x
+                      "
+                    />
+                    <img
+                      class="cards__image"
+                      src="./img/cat-food/cat-food-500-chicken.png"
+                      alt="оранжевая банка с едой."
+                      width="140"
+                      height="107"
+                      srcset="./img/cat-food-500-chicken@2x.png 2x"
+                    />
+                  </picture>
+                </a>
 
                 <div>
-                  <h2 class="cards__title">Cat Energy PRO 500 г</h2>
+                  <a class="cards__link" href="./cat-energy-pro-500-desc.html"
+                    ><h2 class="cards__title">Cat Energy PRO 500 г</h2></a
+                  >
+
                   <dl class="cards__description">
                     <div class="cards__description-wrapper">
                       <dt class="cards__term">Масса</dt>
@@ -145,46 +156,54 @@
                   </dl>
                 </div>
               </div>
-              <button class="cards__button button" type="button">
+              <a
+                class="cards__button button"
+                href="./cat-energy-pro-500-order.html"
+              >
                 заказать
-              </button>
+              </a>
             </li>
             <li class="cards__item">
               <div class="cards__wrapper">
-                <picture>
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      ./img/cat-food-1000-chicken-tablet@1x.webp 1x,
-                      ./img/cat-food-1000-chicken-tablet@2x.webp 2x
-                    "
-                  />
-                  <source
-                    srcset="
-                      ./img/cat-food/cat-food-1000-chicken.webp 1x,
-                      ./img/cat-food-1000-chicken@2x.webp       2x
-                    "
-                    type="image/webp"
-                  />
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      ./img/cat-food-1000-chicken-tablet@1x.png 1x,
-                      ./img/cat-food-1000-chicken-tablet@2x.png 2x
-                    "
-                  />
-                  <img
-                    class="cards__image"
-                    src="./img/cat-food/cat-food-1000-chicken.png"
-                    alt="оранжевая банка с едой"
-                    width="140"
-                    height="107"
-                    srcset="./img/cat-food-1000-chicken@2x.png 2x"
-                  />
-                </picture>
+                <a class="cards__link" href="./cat-energy-pro-1000-desc.html">
+                  <picture>
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/cat-food-1000-chicken-tablet@1x.webp 1x,
+                        ./img/cat-food-1000-chicken-tablet@2x.webp 2x
+                      "
+                    />
+                    <source
+                      srcset="
+                        ./img/cat-food/cat-food-1000-chicken.webp 1x,
+                        ./img/cat-food-1000-chicken@2x.webp       2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/cat-food-1000-chicken-tablet@1x.png 1x,
+                        ./img/cat-food-1000-chicken-tablet@2x.png 2x
+                      "
+                    />
+                    <img
+                      class="cards__image"
+                      src="./img/cat-food/cat-food-1000-chicken.png"
+                      alt="оранжевая банка с едой."
+                      width="140"
+                      height="107"
+                      srcset="./img/cat-food-1000-chicken@2x.png 2x"
+                    />
+                  </picture>
+                </a>
 
                 <div>
-                  <h2 class="cards__title">Cat Energy PRO 1000 г</h2>
+                  <a class="cards__link" href="./cat-energy-pro-1000-desc.html">
+                    <h2 class="cards__title">Cat Energy PRO 1000 г</h2>
+                  </a>
+
                   <dl class="cards__description">
                     <div class="cards__description-wrapper">
                       <dt class="cards__term">Масса</dt>
@@ -201,46 +220,53 @@
                   </dl>
                 </div>
               </div>
-              <button class="cards__button button" type="button">
+              <a
+                class="cards__button button"
+                href="./cat-energy-pro-1000-order.html"
+              >
                 заказать
-              </button>
+              </a>
             </li>
             <li class="cards__item">
               <div class="cards__wrapper">
-                <picture>
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      ./img/cat-food-500-fish-tablet@1x.webp 1x,
-                      ./img/cat-food-500-fish-tablet@2x.webp 2x
-                    "
-                  />
-                  <source
-                    srcset="
-                      ./img/cat-food/cat-food-500-fish.webp 1x,
-                      ./img/cat-food-500-fish@2x.webp       2x
-                    "
-                    type="image/webp"
-                  />
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      ./img/cat-food-500-fish-tablet@1x.png 1x,
-                      ./img/cat-food-500-fish-tablet@2x.png 2x
-                    "
-                  />
-                  <img
-                    class="cards__image"
-                    src="./img/cat-food/cat-food-500-fish.png"
-                    alt="зеленая банка с едой"
-                    width="140"
-                    height="107"
-                    srcset="./img/cat-food-500-fish@2x.png 2x"
-                  />
-                </picture>
+                <a class="cards__link" href="./cat-energy-pro-500-desc.html"
+                  ><picture>
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/cat-food-500-fish-tablet@1x.webp 1x,
+                        ./img/cat-food-500-fish-tablet@2x.webp 2x
+                      "
+                    />
+                    <source
+                      srcset="
+                        ./img/cat-food/cat-food-500-fish.webp 1x,
+                        ./img/cat-food-500-fish@2x.webp       2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/cat-food-500-fish-tablet@1x.png 1x,
+                        ./img/cat-food-500-fish-tablet@2x.png 2x
+                      "
+                    />
+                    <img
+                      class="cards__image"
+                      src="./img/cat-food/cat-food-500-fish.png"
+                      alt="зеленая банка с едой."
+                      width="140"
+                      height="107"
+                      srcset="./img/cat-food-500-fish@2x.png 2x"
+                    /> </picture
+                ></a>
 
                 <div>
-                  <h2 class="cards__title">Cat Energy PRO 500 г</h2>
+                  <a class="cards__link" href="./cat-energy-pro-500-desc.html">
+                    <h2 class="cards__title">Cat Energy PRO 500 г</h2>
+                  </a>
+
                   <dl class="cards__description">
                     <div class="cards__description-wrapper">
                       <dt class="cards__term">Масса</dt>
@@ -257,46 +283,53 @@
                   </dl>
                 </div>
               </div>
-              <button class="cards__button button" type="button">
+              <a
+                class="cards__button button"
+                href="./cat-energy-pro-500-order.html"
+              >
                 заказать
-              </button>
+              </a>
             </li>
             <li class="cards__item">
               <div class="cards__wrapper">
-                <picture>
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      ./img/cat-food-1000-fish-tablet@1x.webp 1x,
-                      ./img/cat-food-1000-fish-tablet@2x.webp 2x
-                    "
-                  />
-                  <source
-                    srcset="
-                      ./img/cat-food/cat-food-1000-fish.webp 1x,
-                      ./img/cat-food-1000-fish@2x.webp       2x
-                    "
-                    type="image/webp"
-                  />
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      ./img/cat-food-1000-fish-tablet@1x.png 1x,
-                      ./img/cat-food-1000-fish-tablet@2x.png 2x
-                    "
-                  />
-                  <img
-                    class="cards__image"
-                    src="./img/cat-food/cat-food-1000-fish.png"
-                    alt="зеленая банка с едой"
-                    width="140"
-                    height="107"
-                    srcset="./img/cat-food-1000-fish@2x.png 2x"
-                  />
-                </picture>
+                <a class="cards__link" href="./cat-energy-pro-1000-desc.html"
+                  ><picture>
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/cat-food-1000-fish-tablet@1x.webp 1x,
+                        ./img/cat-food-1000-fish-tablet@2x.webp 2x
+                      "
+                    />
+                    <source
+                      srcset="
+                        ./img/cat-food/cat-food-1000-fish.webp 1x,
+                        ./img/cat-food-1000-fish@2x.webp       2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/cat-food-1000-fish-tablet@1x.png 1x,
+                        ./img/cat-food-1000-fish-tablet@2x.png 2x
+                      "
+                    />
+                    <img
+                      class="cards__image"
+                      src="./img/cat-food/cat-food-1000-fish.png"
+                      alt="зеленая банка с едой."
+                      width="140"
+                      height="107"
+                      srcset="./img/cat-food-1000-fish@2x.png 2x"
+                    /> </picture
+                ></a>
 
                 <div>
-                  <h2 class="cards__title">Cat Energy PRO 1000 г</h2>
+                  <a class="cards__link" href="./cat-energy-pro-1000-desc.html"
+                    ><h2 class="cards__title">Cat Energy PRO 1000 г</h2></a
+                  >
+
                   <dl class="cards__description">
                     <div class="cards__description-wrapper">
                       <dt class="cards__term">Масса</dt>
@@ -313,46 +346,53 @@
                   </dl>
                 </div>
               </div>
-              <button class="cards__button button" type="button">
+              <a
+                class="cards__button button"
+                href="./cat-energy-pro-1000-order.html"
+              >
                 заказать
-              </button>
+              </a>
             </li>
             <li class="cards__item">
               <div class="cards__wrapper">
-                <picture>
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      ./img/cat-food-500-buckwheat-tablet@1x.webp 1x,
-                      ./img/cat-food-500-buckwheat-tablet@2x.webp 2x
-                    "
-                  />
-                  <source
-                    srcset="
-                      ./img/cat-food/cat-food-500-buckwheat.webp 1x,
-                      ./img/cat-food-500-buckwheat@2x.webp       2x
-                    "
-                    type="image/webp"
-                  />
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      ./img/cat-food-500-buckwheat-tablet@1x.png 1x,
-                      ./img/cat-food-500-buckwheat-tablet@2x.png 2x
-                    "
-                  />
-                  <img
-                    class="cards__image"
-                    src="./img/cat-food/cat-food-500-buckwheat.png"
-                    alt="синяя банка с едой"
-                    width="140"
-                    height="107"
-                    srcset="./img/cat-food-500-buckwheat@2x.png 2x"
-                  />
-                </picture>
+                <a class="cards__link" href="./cat-energy-slim-500-desc.html"
+                  ><picture>
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/cat-food-500-buckwheat-tablet@1x.webp 1x,
+                        ./img/cat-food-500-buckwheat-tablet@2x.webp 2x
+                      "
+                    />
+                    <source
+                      srcset="
+                        ./img/cat-food/cat-food-500-buckwheat.webp 1x,
+                        ./img/cat-food-500-buckwheat@2x.webp       2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/cat-food-500-buckwheat-tablet@1x.png 1x,
+                        ./img/cat-food-500-buckwheat-tablet@2x.png 2x
+                      "
+                    />
+                    <img
+                      class="cards__image"
+                      src="./img/cat-food/cat-food-500-buckwheat.png"
+                      alt="синяя банка с едой."
+                      width="140"
+                      height="107"
+                      srcset="./img/cat-food-500-buckwheat@2x.png 2x"
+                    /> </picture
+                ></a>
 
                 <div>
-                  <h2 class="cards__title">Cat Energy sLIM 500 г</h2>
+                  <a class="cards__link" href="./cat-energy-slim-500-desc.html"
+                    ><h2 class="cards__title">Cat Energy sLIM 500 г</h2></a
+                  >
+
                   <dl class="cards__description">
                     <div class="cards__description-wrapper">
                       <dt class="cards__term">Масса</dt>
@@ -369,46 +409,53 @@
                   </dl>
                 </div>
               </div>
-              <button class="cards__button button" type="button">
+              <a
+                class="cards__button button"
+                href="./cat-energy-slim-500-order.html"
+              >
                 заказать
-              </button>
+              </a>
             </li>
             <li class="cards__item">
               <div class="cards__wrapper">
-                <picture>
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      ./img/cat-food-1000-buckwheat-tablet@1x.webp 1x,
-                      ./img/cat-food-1000-buckwheat-tablet@2x.webp 2x
-                    "
-                  />
-                  <source
-                    srcset="
-                      ./img/cat-food/cat-food-1000-buckwheat.webp 1x,
-                      ./img/cat-food-1000-buckwheat@2x.webp       2x
-                    "
-                    type="image/webp"
-                  />
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      ./img/cat-food-1000-buckwheat-tablet@1x.png 1x,
-                      ./img/cat-food-1000-buckwheat-tablet@2x.png 2x
-                    "
-                  />
-                  <img
-                    class="cards__image"
-                    src="./img/cat-food/cat-food-1000-buckwheat.png"
-                    alt="синяя банка с едой"
-                    width="140"
-                    height="107"
-                    srcset="./img/cat-food-1000-buckwheat@2x.png 2x"
-                  />
-                </picture>
+                <a class="cards__link" href="./cat-energy-slim-1000-desc.html"
+                  ><picture>
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/cat-food-1000-buckwheat-tablet@1x.webp 1x,
+                        ./img/cat-food-1000-buckwheat-tablet@2x.webp 2x
+                      "
+                    />
+                    <source
+                      srcset="
+                        ./img/cat-food/cat-food-1000-buckwheat.webp 1x,
+                        ./img/cat-food-1000-buckwheat@2x.webp       2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/cat-food-1000-buckwheat-tablet@1x.png 1x,
+                        ./img/cat-food-1000-buckwheat-tablet@2x.png 2x
+                      "
+                    />
+                    <img
+                      class="cards__image"
+                      src="./img/cat-food/cat-food-1000-buckwheat.png"
+                      alt="синяя банка с едой."
+                      width="140"
+                      height="107"
+                      srcset="./img/cat-food-1000-buckwheat@2x.png 2x"
+                    /> </picture
+                ></a>
 
                 <div>
-                  <h2 class="cards__title">Cat Energy SLIM 1000 г</h2>
+                  <a class="cards__link" href="./cat-energy-slim-1000-desc.html"
+                    ><h2 class="cards__title">Cat Energy SLIM 1000 г</h2></a
+                  >
+
                   <dl class="cards__description">
                     <div class="cards__description-wrapper">
                       <dt class="cards__term">Масса</dt>
@@ -425,42 +472,49 @@
                   </dl>
                 </div>
               </div>
-              <button class="cards__button button" type="button">
+              <a
+                class="cards__button button"
+                href="./cat-energy-slim-1000-order.html"
+              >
                 заказать
-              </button>
+              </a>
             </li>
             <li class="cards__item">
               <div class="cards__wrapper">
-                <picture>
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      ./img/cat-food-500-slim-tablet@1x.webp 1x,
-                      ./img/cat-food-500-slim-tablet@2x.webp 2x
-                    " />
-                  <source
-                    srcset="
-                      ./img/cat-food/cat-food-slim-500.webp 1x,
-                      ./img/cat-food-500-slim@2x.webp       2x
-                    "
-                    type="image/webp" />
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      ./img/cat-food-500-slim-tablet@1x.png 1x,
-                      ./img/cat-food-500-slim-tablet@2x.png 2x
-                    " />
-                  <img
-                    class="cards__image"
-                    src="./img/cat-food/cat-food-slim-500.png"
-                    alt="фиолетовая банка с едой"
-                    width="140"
-                    height="107"
-                    srcset="./img/cat-food-500-slim@2x.png 2x"
-                /></picture>
+                <a class="cards__link" href="./cat-energy-slim-500-desc.html"
+                  ><picture>
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/cat-food-500-slim-tablet@1x.webp 1x,
+                        ./img/cat-food-500-slim-tablet@2x.webp 2x
+                      " />
+                    <source
+                      srcset="
+                        ./img/cat-food/cat-food-slim-500.webp 1x,
+                        ./img/cat-food-500-slim@2x.webp       2x
+                      "
+                      type="image/webp" />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/cat-food-500-slim-tablet@1x.png 1x,
+                        ./img/cat-food-500-slim-tablet@2x.png 2x
+                      " />
+                    <img
+                      class="cards__image"
+                      src="./img/cat-food/cat-food-slim-500.png"
+                      alt="фиолетовая банка с едой."
+                      width="140"
+                      height="107"
+                      srcset="./img/cat-food-500-slim@2x.png 2x" /></picture
+                ></a>
 
                 <div>
-                  <h2 class="cards__title">Cat Energy slim 500 г</h2>
+                  <a class="cards__link" href="./cat-energy-slim-500-desc.html"
+                    ><h2 class="cards__title">Cat Energy slim 500 г</h2></a
+                  >
+
                   <dl class="cards__description">
                     <div class="cards__description-wrapper">
                       <dt class="cards__term">Масса</dt>
@@ -477,21 +531,24 @@
                   </dl>
                 </div>
               </div>
-              <button class="cards__button button" type="button">
+              <a
+                class="cards__button button"
+                href="./cat-energy-slim-500-order.html"
+              >
                 заказать
-              </button>
+              </a>
             </li>
             <li class="cards__item cards__item--last">
               <p class="catalog__main-text">Показать еще 100500 товаров</p>
               <p class="catalog__secondary-text">
                 На самом деле вкусов гораздо больше!
               </p>
-              <button
+              <a
                 class="button button--show-all catalog__button cards__button"
-                type="button"
+                href="./all-goods.html"
               >
                 показать все
-              </button>
+              </a>
             </li>
           </ul>
         </div>
@@ -572,7 +629,7 @@
           </p>
         </div>
         <iframe
-          class="contacts__picture-wrapper contacts__map"
+          class="contacts__picture-wrapper contacts__map contacts__map contacts__map--no-js"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257197507!2d30.32047247624954!3d59.93871916209469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1716359340768!5m2!1sru!2sru"
           width="400"
           height="300"
@@ -620,7 +677,7 @@
             <img
               class="contacts__picture-wrapper"
               src="./img/location-map-mobile@1x.jpg"
-              alt="карта местонахождения Cat Energy"
+              alt="карта местонахождения Cat Energy."
               srcset="./img/location-map-mobile@2x.jpg 2x"
               loading="lazy"
             />
@@ -696,5 +753,6 @@
       </section>
     </footer>
     <script src="./js/burger.js"></script>
+    <script src="./js/button-show-all.js"></script>
   </body>
 </html>
