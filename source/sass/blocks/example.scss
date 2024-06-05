@@ -3,11 +3,13 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
+    min-height: 462px;
     justify-content: space-between;
     background-color: $basic-grey;
     gap: 224px;
     padding-left: 110px;
     padding-right: 110px;
+    margin-bottom: -62px;
   }
 }
 
@@ -32,6 +34,14 @@
   }
 }
 
+.example__wrapper {
+  background-color: #eaeaea;
+
+  @media (min-width: $desktop-width) {
+    background-color: transparent;
+  }
+}
+
 .example__title {
   line-height: 1.11;
   margin-bottom: 40px;
@@ -44,7 +54,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 146px;
+    margin-bottom: 147px;
     font-size: 60px;
     width: 325px;
   }
@@ -56,13 +66,15 @@
   margin: 0 0 20px;
 
   @media (min-width: $tablet-width) {
+    margin-top: -2px;
     font-size: 16px;
     line-height: 1.5;
-    margin-bottom: 55px;
+    margin-bottom: 57px;
+    transform: translateY(2px);
   }
 
   @media (min-width: $desktop-width) {
-    width: 435px;
+    width: 440px;
     margin-bottom: 69px;
   }
 }
@@ -70,6 +82,7 @@
 .example__desc {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 0 0 20px;
 
   @media (min-width: $tablet-width) {
@@ -89,7 +102,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("../../img/border.svg");
+  background-image: url("../img/border.svg");
   background-repeat: no-repeat;
   background-size: contain;
 
@@ -97,7 +110,7 @@
     width: 162px;
 
     &:nth-child(2) {
-      background-image: url("../../img/border-wide.svg");
+      background-image: url("../img/border-wide.svg");
     }
   }
 }
@@ -105,6 +118,7 @@
 .example__desc-term {
   font-family: $second-family;
   font-size: 24px;
+  text-align: center;
   margin-top: 14px;
   margin-bottom: 7px;
 
@@ -139,22 +153,31 @@
 
   @media (min-width: $tablet-width) {
     width: 174px;
-    margin-top: 14px;
+    margin-top: 11px;
     padding-bottom: 0;
     text-align: right;
     font-size: 20px;
     line-height: 1;
+    transform: translateX(-2px);
   }
 
   @media (min-width: $desktop-width) {
     width: 327px;
     margin-top: 0;
     text-align: left;
+    transform: translate(2px, -1px);
   }
 }
 
 .example__price {
+  @media (min-width: $tablet-width) {
+    display: inline-block;
+    margin-top: 9px;
+    transform: translateX(2px);
+  }
+
   @media (min-width: $desktop-width) {
+    margin-top: 3px;
     margin-left: 60px;
   }
 }
@@ -178,8 +201,11 @@
   background-color: #eaeaea;
   padding-bottom: 40px;
   height: 296px;
+  width: 280px;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
+    width: 560px;
     height: 462px;
   }
 
@@ -198,47 +224,68 @@
     width: 280px;
     height: 512px;
     background-size: cover;
-    transform: translateY(-135px);
+    transform: translateY(-151px);
   }
 
   &--before {
-    background-image: url("../../img/cat-before.png");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../../img/cat-before@2x.png");
-      background-size: cover;
-    }
+    background-image: url("../img/cat-before.png");
+    /* stylelint-disable-next-line */
+    background-image: image-set(
+      url("../img/cat-before@2x.webp") 2x,
+      url("../img/cat-before.webp") 1x,
+      url("../img/cat-before@2x.png") 2x,
+      url("../img/cat-before.png") 1x
+    );
 
     @media (min-width: $tablet-width) {
-      background-image: url("../../img/cat-before-tablet.png");
+      background-image: url("../img/cat-before-tablet.png");
+      /* stylelint-disable-next-line */
+      background-image: image-set(
+        url("../img/cat-before-tablet@2x.webp") 2x,
+        url("../img/cat-before-tablet.webp") 1x,
+        url("../img/cat-before-tablet@2x.png") 2x,
+        url("../img/cat-before-tablet.png") 1x
+      );
 
-      @media (min-resolution: 2dppx) {
-        background-image: url("../../img/cat-before-tablet@2x.png");
+      @media (min-width: $desktop-width) {
+        transform: translateY(-135px);
       }
     }
   }
 
   &--after {
-    background-image: url("../../img/cat-after.png");
+    background-image: url("../img/cat-after.png");
+    /* stylelint-disable-next-line */
+    background-image: image-set(
+      url("../img/cat-after@2x.webp") 2x,
+      url("../img/cat-after.webp") 1x,
+      url("../img/cat-after@2x.png") 2x,
+      url("../img/cat-ater.png") 1x
+    );
     background-position: 100%;
 
-    @media (min-resolution: 2dppx) {
-      background-image: url("../../img/cat-after@2x.png");
-      background-size: cover;
+    @media (min-width: $tablet-width) {
+      background-image: url("../img/cat-after-tablet.png");
+      /* stylelint-disable-next-line */
+      background-image: image-set(
+        url("../img/cat-after-tablet@2x.webp") 2x,
+        url("../img/cat-after-tablet.webp") 1x,
+        url("../img/cat-after-tablet@2x.png") 2x,
+        url("../img/cat-after-tablet.png") 1x
+      );
     }
 
-    @media (min-width: $tablet-width) {
-      background-image: url("../../img/cat-after-tablet.png");
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../../img/cat-after-tablet@2x.png");
-      }
+    @media (min-width: $desktop-width) {
+      background-size: 562px 485px;
+      transform: translateY(-134px);
     }
   }
 }
 
 .example__toggle-button {
   position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -249,11 +296,45 @@
   height: 256px;
   border: none;
   background-color: $special-grey-3;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $basic-green;
+  }
+
+  &:hover .example__toggle-icon path {
+    fill: $basic-green;
+  }
+
+  &:hover .example__toggle-icon rect {
+    stroke: $basic-green;
+  }
+
+  &:active {
+    background-color: fade-out($basic-green-2, $amount: 0.3);
+  }
+
+  &:active .example__toggle-icon path {
+    fill: fade-out($basic-green-2, $amount: 0.3);
+  }
+
+  &:active .example__toggle-icon rect {
+    stroke: fade-out($basic-green-2, $amount: 0.3);
+  }
 
   cursor: pointer;
 
   @media (min-width: $tablet-width) {
     height: 512px;
+    top: -151px;
+  }
+
+  @media (min-width: $desktop-width) {
     top: -135px;
   }
+}
+
+.example__toggle-icon path,
+.example__toggle-icon rect {
+  transition: fill 0.3s ease, stroke 1s ease;
 }

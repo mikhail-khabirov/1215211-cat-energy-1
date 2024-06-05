@@ -9,23 +9,7 @@
 
   position: relative;
   overflow: hidden;
-
-  background-image: linear-gradient(
-      fade-out($basic-green, 0.15),
-      fade-out($basic-green, 0.15)
-    ),
-    url("../../img/cat-background.jpg");
   background-repeat: no-repeat, no-repeat;
-  background-size: 100% 302px, 100% 302px;
-  background-position: top;
-
-  @media (min-resolution: 2dppx) {
-    background-image: linear-gradient(
-        fade-out($basic-green, 0.15),
-        fade-out($basic-green, 0.15)
-      ),
-      url("../../img/cat-background@2x.jpg");
-  }
 
   @media (min-width: $tablet-width) {
     background-image: none;
@@ -33,20 +17,31 @@
   }
 
   @media (min-width: $desktop-width) {
+    background-image: url("../img/cat-background-desktop.jpg");
+    /* stylelint-disable */
     background-image: linear-gradient(
         fade-out($basic-green, 0.15),
         fade-out($basic-green, 0.15)
       ),
-      url("../../img/cat-background-desktop.jpg");
-    background-size: 720px 694px, 720px 694px;
+      image-set(
+        url("../img/cat-background-desktop.webp") 1x,
+        url("../img/cat-background-desktop@2x.webp") 2x,
+        url("../img/cat-background-desktop.jpg") 1x,
+        url("../img/cat-background-desktop@2x.jpg") 2x
+      );
+    /* stylelint-enable */
+    background-size: 50%, 50%;
     background-position: top right, top right;
 
-    @media (min-resolution: 2dppx) {
-      background-image: linear-gradient(
-          fade-out($basic-green, 0.15),
-          fade-out($basic-green, 0.15)
-        ),
-        url("../../img/cat-background-desktop@2x.jpg");
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 50%;
+      height: 694px;
+      background-color: rgba(104, 183, 56, 0.85);
+      z-index: -1;
     }
   }
 }
@@ -57,10 +52,38 @@
   align-items: center;
 }
 
+.hero__text-wrapper {
+  width: 100vw;
+  background-image: url("../img/cat-background.jpg");
+  /* stylelint-disable */
+  background-image: linear-gradient(
+      fade-out($basic-green, 0.15),
+      fade-out($basic-green, 0.15)
+    ),
+    image-set(
+      url("../img/cat-background.webp") 1x,
+      url("../img/cat-background@2x.webp") 2x,
+      url("../img/cat-background.jpg") 1x,
+      url("../img/cat-background@2x.jpg") 2x
+    );
+  /* stylelint-enable */
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100%, 100%;
+  background-position: top;
+  background-color: fade-out($basic-green, 0.15);
+
+  @media (min-width: $tablet-width) {
+    background-color: transparent;
+    background-image: none;
+  }
+}
+
 .hero__title {
+  position: relative;
   margin: 27px auto 25px;
   text-align: center;
   width: 270px;
+  z-index: 1;
 
   @media (min-width: $tablet-width) {
     margin: 65px 0 40px 90px;
@@ -80,12 +103,14 @@
 }
 
 .hero__slogan {
-  margin: 0 auto 29px;
+  position: relative;
+  margin: 0 auto 164px;
   width: 198px;
   font-family: $second-family;
   text-transform: uppercase;
   color: #ffffff;
   text-align: center;
+  z-index: 1;
 
   @media (min-width: $tablet-width) {
     margin: 0 0 50px 90px;
@@ -102,7 +127,8 @@
 }
 
 .hero__button {
-  margin: 3px 0 20px;
+  margin: 138px 0 20px;
+  text-decoration: none;
 
   @media (min-width: $tablet-width) {
     margin-top: 0;
@@ -122,10 +148,15 @@
 .hero__image {
   width: 280px;
   height: 270px;
+  position: absolute;
+  top: 167px;
+  left: 50%;
+  transform: translateX(-50%);
 
   @media (min-width: $tablet-width) {
     width: 709px;
     height: 609px;
+    transform: none;
     position: absolute;
     top: 266px;
     left: 30px;

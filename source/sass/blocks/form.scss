@@ -10,14 +10,14 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 188px;
+    padding-top: 73px;
     padding-bottom: 79px;
   }
 }
 
 .form__title {
-  width: 260px;
-  margin: 0 0 37px;
+  width: 265px;
+  margin: 0 0 36px;
 
   @media (min-width: $tablet-width) {
     width: 500px;
@@ -36,7 +36,7 @@
   width: 226px;
   line-height: 1.29;
   text-transform: uppercase;
-  margin: 0 0 39px;
+  margin: 0 0 39px 1px;
 
   @media (min-width: $tablet-width) {
     width: 323px;

@@ -79,3 +79,9 @@
     height: 400px;
   }
 }
+
+.contacts__map {
+  &--no-js {
+    display: none;
+  }
+}

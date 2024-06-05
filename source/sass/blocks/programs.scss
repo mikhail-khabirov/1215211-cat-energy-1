@@ -2,7 +2,9 @@
   @include list-reset();
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 20px;
 
   margin-bottom: 20px;
@@ -17,25 +19,26 @@
     padding-top: 82px;
     padding-bottom: 71px;
     gap: 80px;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
   }
 }
 
 .programs__card {
+  min-width: 280px;
+  min-height: 266px;
   position: relative;
   padding: 21px 20px 18px;
   background-color: $basic-grey;
 
   @media (min-width: $tablet-width) {
+    width: 708px;
     min-height: 372px;
     padding: 77px 63px 53px 52px;
   }
 
   @media (min-width: $desktop-width) {
     padding: 77px 61px 55px 52px;
-    min-width: 570px;
-    width: 100%;
+    width: 570px;
     min-height: 374px;
   }
 }
@@ -46,10 +49,9 @@
   line-height: 1.54;
   text-transform: uppercase;
 
-  width: 230px;
-  margin: 0 0 22px;
+  width: 220px;
+  margin: 9px 0 29px 70px;
 
-  position: relative;
   display: flex;
   align-items: center;
   column-gap: 20px;
@@ -59,12 +61,11 @@
     width: 230px;
     font-size: 36px;
     line-height: 1;
-    margin-bottom: 24px;
+    margin: 0 0 23px;
   }
 
   @media (min-width: $desktop-width) {
-    position: relative;
-    margin-bottom: 73px;
+    margin: 0 0 73px 162px;
     justify-content: space-between;
 
     &--cat-sit {
@@ -80,6 +81,9 @@
 .programs__card-title::before {
   content: "";
   display: block;
+  position: absolute;
+  top: 22px;
+  left: 20px;
   width: 50px;
   height: 50px;
   background-color: $basic-green;
@@ -94,9 +98,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    position: static;
     width: 100px;
     height: 100px;
+    top: 47px;
+    left: 52px;
   }
 }
 
@@ -109,11 +114,11 @@
 }
 
 .programs__card-title--cat-sit::after {
-  background-image: url("../../img/program-cat-sit.svg");
+  background-image: url("../img/program-cat-sit.svg");
   width: 36px;
   height: 50px;
-  top: -3px;
-  left: 7px;
+  top: 20px;
+  left: 27px;
 
   @media (min-width: $tablet-width) {
     width: 140px;
@@ -125,17 +130,17 @@
   @media (min-width: $desktop-width) {
     width: 70px;
     height: 97px;
-    top: -6px;
-    left: 15px;
+    top: 40px;
+    left: 67px;
   }
 }
 
 .programs__card-title--cat-walk::after {
-  background-image: url("../../img/program-cat-walk.svg");
+  background-image: url("../img/program-cat-walk.svg");
   width: 67px;
   height: 28px;
-  top: 11px;
-  left: -8px;
+  top: 34px;
+  left: 12px;
 
   @media (min-width: $tablet-width) {
     width: 268px;
@@ -147,8 +152,8 @@
   @media (min-width: $desktop-width) {
     width: 134px;
     height: 56px;
-    top: 20px;
-    left: -19px;
+    top: 67px;
+    left: 33px;
   }
 }
 
@@ -156,7 +161,7 @@
   line-height: 1.29;
   color: $special-dark-grey;
 
-  margin: 0 0 15px;
+  margin: 0 0 16px;
   padding-bottom: 23px;
   width: 227px;
 
@@ -165,7 +170,7 @@
   @media (min-width: $tablet-width) {
     width: 340px;
     padding: 0;
-    margin-bottom: 48px;
+    margin-bottom: 54px;
     font-size: 16px;
     line-height: 1.5;
     color: #000000;
@@ -174,7 +179,7 @@
 
   @media (min-width: $desktop-width) {
     width: 458px;
-    margin-bottom: 23px;
+    margin-bottom: 29px;
   }
 }
 
@@ -185,22 +190,28 @@
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
+  transition: opacity 0.3s ease;
 
   width: 134px;
 
+  &:active {
+    opacity: 0.3;
+  }
+
   &::after {
     content: "";
-    position: absolute;
-    width: 24px;
+    display: inline-block;
+    width: 32px;
     height: 12px;
-    top: 9px;
-    right: -39px;
-    background-image: url("../../img/catalog-arrow.svg");
-    background-size: contain;
+    margin-left: 16px;
+    background-image: url("../img/catalog-arrow.svg");
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 
     @media (min-width: $tablet-width) {
-      right: -49px;
+      height: 15px;
+      margin-left: 26px;
     }
   }
 

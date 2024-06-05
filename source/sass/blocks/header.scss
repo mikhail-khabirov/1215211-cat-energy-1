@@ -11,15 +11,34 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 0;
     border-bottom: none;
+    column-gap: 94px;
   }
 
   @media (min-width: $desktop-width) {
     width: 1220px;
+    justify-content: space-between;
     padding-top: 0;
     padding-bottom: 0;
+    align-items: start;
+  }
+}
+
+.header__logo {
+  width: 200px;
+  flex-shrink: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 174px;
+
+    &--form {
+      width: 177px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 202px;
   }
 }

@@ -20,6 +20,7 @@
   color: $special-dark-grey;
 
   @media (min-width: $tablet-width) {
+    gap: 19px;
     font-size: 20px;
   }
 
@@ -28,8 +29,15 @@
     display: block;
     width: 30px;
     height: 30px;
+    flex-shrink: 0;
     border-radius: 50%;
     border: 1px solid $special-grey;
+
+    @media (min-width: $tablet-width) {
+      width: 40px;
+      height: 40px;
+      margin-top: -1px;
+    }
   }
 
   &--program::after {
@@ -43,18 +51,28 @@
     top: 50%;
     left: 9px;
     transform: translateY(-50%);
+
+    @media (min-width: $tablet-width) {
+      width: 18px;
+      height: 18px;
+      top: 46%;
+      left: 10px;
+    }
   }
 }
 
-.input__radio:checked + .input__label--program::after {
-  display: block;
-}
-
+.input__radio:checked + .input__label::after,
 .input__checkbox:checked + .input__label::after {
   display: block;
 }
 
+.input__radio:focus-visible + .input__label::before,
+.input__checkbox:focus-visible + .input__label::before {
+  outline: 2px solid $special-dark-grey;
+}
+
 .input__field {
+  height: 45px;
   font-family: $second-family;
   font-size: 16px;
   line-height: 1.12;
@@ -64,22 +82,33 @@
   border: 1px solid #e7e7e7;
   flex-grow: 1;
 
+  &:hover {
+    border-color: $special-grey;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border: 2px solid $special-dark-grey;
+  }
+
+  &:focus-visible + .cat-info__input-contact-icon path {
+    stroke: $basic-green;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 11px 20px;
     font-size: 20px;
     line-height: 1.44;
+    height: 52px;
   }
 }
 
 .input__label--about-cat {
   margin-right: 13px;
+  flex-shrink: 0;
 }
 
 .input__label--program {
-  @media (min-width: $tablet-width) {
-    margin-left: 20px;
-  }
-
   @media (min-width: $desktop-width) {
     height: 40px;
     display: flex;
@@ -92,16 +121,20 @@
 }
 
 .input__label--add {
-  @media (min-width: $tablet-width) {
-    margin-left: 20px;
-  }
+  color: $basic-black;
 
   &::before {
     content: "";
     display: block;
     width: 30px;
     height: 30px;
+    flex-shrink: 0;
     border: 1px solid $special-grey;
+
+    @media (min-width: $tablet-width) {
+      width: 40px;
+      height: 40px;
+    }
   }
 
   &::after {
@@ -110,10 +143,18 @@
     display: none;
     width: 18px;
     height: 14px;
-    background-image: url("../../img/checkbox.svg");
+    background-image: url("../img/checkbox.svg");
     top: 50%;
     left: 6px;
     transform: translateY(-50%);
+
+    @media (min-width: $tablet-width) {
+      width: 26px;
+      height: 26px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
   }
 }
 
@@ -127,10 +168,40 @@
   line-height: 1.12;
   text-transform: uppercase;
   color: $special-dark-grey;
+  transition: border 0.3s ease;
+
+  &:hover {
+    border: 1px solid $special-grey;
+  }
+
+  &:focus-visible {
+    border: 2px solid $special-dark-grey;
+  }
 
   @media (min-width: $tablet-width) {
-    padding: 11px 20px;
+    padding: 15px 20px;
     font-size: 20px;
     min-height: 175px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 11px 20px;
+  }
+}
+
+.input__label--program,
+.input__label--add {
+  cursor: pointer;
+
+  &:hover::before {
+    border: 1px solid #bababa;
+  }
+
+  &:active::before {
+    border: 1px solid #bababa;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

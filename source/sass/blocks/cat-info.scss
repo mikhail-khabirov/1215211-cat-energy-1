@@ -15,7 +15,6 @@
     padding-right: 110px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
   }
 }
@@ -23,19 +22,17 @@
 .cat-info__wrapper {
   display: flex;
   flex-direction: column;
-  gap: 13px;
+  gap: 12px;
 
   @media (min-width: $tablet-width) {
     min-width: 533px;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 32px 123px;
-    justify-content: space-between;
-    padding-right: 70px;
 
     @media (min-width: $desktop-width) {
-      width: 1125px;
-      gap: 0;
+      width: 1200px;
+      gap: 104px;
       padding-right: 0;
     }
 
@@ -74,7 +71,7 @@
 
 .cat-info__group--about-cat {
   padding-top: 0;
-  padding-bottom: 24px;
+  padding-bottom: 22px;
   gap: 14px;
 
   @media (min-width: $tablet-width) {
@@ -84,8 +81,16 @@
   }
 
   @media (min-width: $desktop-width) {
+    flex-grow: 1;
+    margin-right: 80px;
     width: 570px;
     padding-bottom: 70px;
+  }
+
+  .input__field {
+    &:invalid {
+      border: 2px solid $status-error;
+    }
   }
 }
 
@@ -111,7 +116,7 @@
 
 .cat-info__group--contact {
   padding-top: 0;
-  padding-bottom: 24px;
+  padding-bottom: 25px;
   gap: 14px;
 
   @media (min-width: $tablet-width) {
@@ -123,26 +128,45 @@
     width: 100%;
     padding-bottom: 70px;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 80px;
   }
 
-  .cat-info__input-contact::before {
-    content: "";
+  .cat-info__input-contact-icon {
     position: absolute;
     width: 20px;
     height: 20px;
-    top: 13px;
+    top: 14px;
     right: 13px;
     background-repeat: no-repeat;
     background-position: center;
+
+    @media (min-width: $tablet-width) {
+      top: 16px;
+      right: 15px;
+    }
+
+    svg {
+      fill: #ffffff;
+    }
+
+    path {
+      stroke: $special-dark-grey-2;
+    }
   }
 
-  .cat-info__input-contact:nth-of-type(1)::before {
-    background-image: url("../../img/email-icon.svg");
+  .cat-info__input-contact {
+    @media (min-width: $desktop-width) {
+      width: 569px;
+    }
   }
 
-  .cat-info__input-contact:nth-of-type(2)::before {
-    background-image: url("../../img/phone-icon.svg");
+  .input__field:invalid {
+    border: 2px solid $status-error;
+  }
+
+  .input__field:invalid + .cat-info__input-contact-icon path {
+    stroke: $status-error;
   }
 }
 
@@ -167,6 +191,10 @@
 
   @media (min-width: $tablet-width) {
     padding-bottom: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 58px;
   }
 }
 
@@ -194,8 +222,8 @@
 .cat-info__title--contact {
   position: relative;
   width: 187px;
-  padding-top: 26px;
-  margin-bottom: 35px;
+  padding-top: 27px;
+  margin-bottom: 33px;
 
   @media (min-width: $tablet-width) {
     width: 600px;
@@ -212,14 +240,14 @@
     position: absolute;
     width: 100vw;
     height: 2px;
-    top: 41px;
-    left: 0;
+    top: 42px;
+    left: 2px;
     margin-left: 205px;
     background-color: $basic-green;
 
     @media (min-width: $tablet-width) {
-      top: 86px;
-      margin-left: 553px;
+      top: 87px;
+      margin-left: 550px;
     }
 
     @media (min-width: $desktop-width) {
@@ -233,7 +261,7 @@
       position: absolute;
       width: 30px;
       height: 2px;
-      top: 86px;
+      top: 87px;
       left: -70px;
       background-color: $basic-green;
     }
@@ -265,14 +293,14 @@
     position: absolute;
     width: 100vw;
     height: 2px;
-    top: 13px;
-    left: 0;
+    top: 15px;
+    left: -4px;
     margin-left: 145px;
     background-color: $basic-green;
 
     @media (min-width: $tablet-width) {
-      top: 20px;
-      margin-left: 238px;
+      top: 22px;
+      margin-left: 226px;
     }
 
     @media (min-width: $desktop-width) {
@@ -286,7 +314,7 @@
       position: absolute;
       width: 30px;
       height: 2px;
-      top: 20px;
+      top: 22px;
       left: -70px;
       background-color: $basic-green;
     }
@@ -312,14 +340,14 @@
     position: absolute;
     width: 100vw;
     height: 2px;
-    top: 13px;
-    left: 0;
+    top: 14px;
+    left: -6px;
     margin-left: 168px;
     background-color: $basic-green;
 
     @media (min-width: $tablet-width) {
-      top: 20px;
-      margin-left: 238px;
+      top: 23px;
+      margin-left: 258px;
     }
 
     @media (min-width: $desktop-width) {
@@ -333,7 +361,7 @@
       position: absolute;
       width: 30px;
       height: 2px;
-      top: 20px;
+      top: 22px;
       left: -70px;
       background-color: $basic-green;
     }
@@ -353,7 +381,7 @@
     width: 284px;
     padding: 14px 60px;
     display: inline-block;
-    margin: 0 0 0 40px;
+    margin: 0;
     font-size: 20px;
     line-height: 1.3;
   }
@@ -365,16 +393,22 @@
 }
 
 .cat-info__text {
-  width: 180px;
+  width: 154px;
   margin: 0 auto;
   line-height: 1.14;
 
   @media (min-width: $tablet-width) {
     display: inline-block;
     width: 180px;
-    margin-left: 60px;
+    margin-left: 56px;
     font-size: 16px;
     line-height: 1;
+    transform: translateY(-5px);
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 76px;
+    transform: translateY(-1px);
   }
 
   @media (min-width: $desktop-width) {
