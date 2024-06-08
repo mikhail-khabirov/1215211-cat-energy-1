@@ -18,11 +18,13 @@
   @media (min-width: $desktop-width) {
     width: 565px;
     min-height: 199px;
+    max-height: 300px;
     position: absolute;
     top: 95px;
     left: 110px;
     background-color: #ffffff;
     padding: 60px 78px 60px 80px;
+    overflow: auto;
   }
 }
 

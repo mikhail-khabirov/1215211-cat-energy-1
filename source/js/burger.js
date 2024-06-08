@@ -14,11 +14,3 @@ navButton.addEventListener('click', function () {
   navButton.classList.toggle('site-navigation__button--is-pressed');
   siteNavigation.classList.toggle('site-navigation--is-opened');
 })
-
-// УБРАТЬ МОДАЛЬНОЕ ОКНО ПО КЛИКУ ВНЕ ОБЛАСТИ МОДАЛЬНОГО ОКНА
-document.addEventListener('click', function (e) {
-  if (e.target !== siteNavigationList && e.target !== siteNavigation && e.target !== navButton && e.target !==siteNavigationItem && e.target !== siteNavigationLink) {
-    navButton.classList.remove('site-navigation__button--is-pressed');
-    siteNavigation.classList.remove('site-navigation--is-opened');
-  }
-})
