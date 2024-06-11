@@ -14,18 +14,18 @@
   }
 }
 
-.social__item {
+.socials__item {
   display: flex;
 }
 
-.social__link {
+.socials__link {
   width: 28px;
   height: 22px;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.social__link-icon {
+.socials__link-icon {
   fill: $special-grey-3;
   transition: fill 0.3s ease;
 

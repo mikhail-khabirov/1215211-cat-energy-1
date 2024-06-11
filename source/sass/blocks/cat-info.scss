@@ -10,7 +10,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    max-width: 100%;
+    width: 100%;
+    max-width: 1440px;
     padding-left: 110px;
     padding-right: 110px;
     display: flex;
@@ -74,6 +75,12 @@
   padding-bottom: 22px;
   gap: 14px;
 
+  .input {
+    @media (min-width: $tablet-width) {
+      flex-wrap: wrap;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     width: 100%;
     padding-bottom: 72px;
@@ -130,20 +137,28 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 80px;
+
+    .input {
+      flex-wrap: wrap;
+    }
   }
 
   .cat-info__input-contact-icon {
     position: absolute;
     width: 20px;
     height: 20px;
-    top: 14px;
+    bottom: 10px;
     right: 13px;
     background-repeat: no-repeat;
     background-position: center;
 
     @media (min-width: $tablet-width) {
-      top: 16px;
+      bottom: 16px;
       right: 15px;
+    }
+
+    @media (min-width: $desktop-width) {
+      bottom: 18px;
     }
 
     svg {
@@ -198,16 +213,53 @@
   }
 }
 
+.cat-info__text-area {
+  border: 1px solid #e7e7e7;
+  resize: none;
+  min-height: 150px;
+  padding: 13px;
+  font-family: $second-family;
+  font-size: 16px;
+  line-height: 1.12;
+  text-transform: uppercase;
+  color: $special-dark-grey;
+  transition: border 0.3s ease;
+
+  &:hover {
+    border: 1px solid $special-grey;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $special-dark-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 15px 20px;
+    font-size: 20px;
+    min-height: 175px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 11px 20px;
+  }
+}
+
 .cat-info__input-contact {
   position: relative;
 
+  @media (min-width: $tablet-width) {
+    flex-wrap: wrap;
+  }
+
   @media (min-width: $desktop-width) {
     width: 570px;
+    align-self: flex-end;
   }
 }
 
 .cat-info__title {
   font-family: $second-family;
+  font-weight: 400;
   padding: 0;
   font-size: 24px;
   line-height: 1.08;
@@ -393,9 +445,10 @@
 }
 
 .cat-info__text {
-  width: 154px;
+  width: 100%;
   margin: 0 auto;
   line-height: 1.14;
+  text-align: center;
 
   @media (min-width: $tablet-width) {
     display: inline-block;

@@ -3,6 +3,7 @@ const range = document.querySelector('.example__picture-wrapper');
 const leftImage = document.querySelector('.example__image--before');
 const rightImage = document.querySelector('.example__image--after');
 
+
 toggleButton.onmousedown = function (e) {
   e.preventDefault();
   let shiftX = e.clientX - toggleButton.getBoundingClientRect().left;
@@ -23,6 +24,7 @@ toggleButton.onmousedown = function (e) {
       newRight = 0;
     }
 
+
     let rightEdge = range.offsetWidth - toggleButton.offsetWidth;
     let leftEdge = toggleButton.offsetWidth - range.offsetWidth;
 
@@ -34,11 +36,23 @@ toggleButton.onmousedown = function (e) {
       newRight = leftEdge;
     }
 
+
+
     toggleButton.style.left = newLeft + 'px';
     toggleButton.style.right = newRight + 'px';
 
-    leftImage.style.width = (newLeft + 4)  + 'px';
+    leftImage.style.width = (newLeft + 4) + 'px';
     rightImage.style.width = (-newRight + 4) + 'px';
+
+
+    if (window.innerWidth >= 1440) {
+
+      if (newRight < -528) {
+        rightImage.style.width = 528 + 'px';
+        range.style.width = 528 + 'px';
+      }
+    }
+
 
   }
 

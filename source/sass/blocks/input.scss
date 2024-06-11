@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   font-family: $second-family;
+  flex-wrap: wrap;
 }
 
 .input__checkbox {
@@ -78,17 +79,18 @@
   line-height: 1.12;
   text-transform: uppercase;
   color: $special-dark-grey;
-  padding: 13px 15px;
+  padding: 13px 40px 13px 15px;
   border: 1px solid #e7e7e7;
+  width: 173px; //100%
   flex-grow: 1;
+  transition: border-color 0.3s ease;
 
   &:hover {
     border-color: $special-grey;
   }
 
   &:focus-visible {
-    outline: none;
-    border: 2px solid $special-dark-grey;
+    outline: 2px solid $special-dark-grey;
   }
 
   &:focus-visible + .cat-info__input-contact-icon path {
@@ -96,16 +98,33 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 11px 20px;
+    padding: 11px 40px 11px 20px;
     font-size: 20px;
     line-height: 1.44;
     height: 52px;
+    max-width: 100%;
+    flex-grow: 1;
+    width: initial;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: initial;
+    max-width: 100%;
   }
 }
 
 .input__label--about-cat {
   margin-right: 13px;
   flex-shrink: 0;
+  max-width: 280px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 628px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 570px;
+  }
 }
 
 .input__label--program {
@@ -118,6 +137,16 @@
 
 .input__label--contact {
   margin-right: 13px;
+  flex-shrink: 0;
+  max-width: 280px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 628px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 570px;
+  }
 }
 
 .input__label--add {
@@ -155,37 +184,6 @@
       background-size: contain;
       background-position: center;
     }
-  }
-}
-
-.input__text--comment {
-  border: 1px solid #e7e7e7;
-  resize: none;
-  min-height: 150px;
-  padding: 13px;
-  font-family: $second-family;
-  font-size: 16px;
-  line-height: 1.12;
-  text-transform: uppercase;
-  color: $special-dark-grey;
-  transition: border 0.3s ease;
-
-  &:hover {
-    border: 1px solid $special-grey;
-  }
-
-  &:focus-visible {
-    border: 2px solid $special-dark-grey;
-  }
-
-  @media (min-width: $tablet-width) {
-    padding: 15px 20px;
-    font-size: 20px;
-    min-height: 175px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 11px 20px;
   }
 }
 

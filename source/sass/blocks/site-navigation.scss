@@ -1,6 +1,6 @@
 .site-navigation {
   &--no-js {
-    & + .site-navigation__button {
+    .site-navigation__button {
       display: none;
     }
 
@@ -74,9 +74,18 @@
 .site-navigation__item {
   display: flex;
   justify-content: center;
+
+  &:nth-of-type(1) .site-navigation__link {
+    border-top: 1px solid #e6e6e6;
+
+    @media (min-width: $tablet-width) {
+      border-top: none;
+    }
+  }
 }
 
 .site-navigation__link {
+  position: relative;
   font-family: $second-family;
   font-weight: 400;
   font-size: 20px;
@@ -121,36 +130,49 @@
 
   &--current {
     @media (min-width: $tablet-width) {
-      text-decoration: underline;
-      text-decoration-color: $basic-green;
-      text-decoration-thickness: 2px;
-      text-underline-position: under;
-      text-underline-offset: 8px;
-    }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: $basic-green;
+        bottom: 2px;
+        left: 0;
 
-    @media (min-width: $desktop-width) {
-      text-underline-offset: 8px;
-      text-decoration-color: #ffffff;
+        @media (min-width: $desktop-width) {
+          background-color: $basic-white;
+        }
+      }
     }
   }
 
   &--current-catalog {
     @media (min-width: $tablet-width) {
-      text-underline-offset: 6px;
+      &::after {
+        bottom: 5px;
+      }
     }
 
     @media (min-width: $desktop-width) {
-      text-underline-offset: 8px;
+      &::after {
+        bottom: 3px;
+        background-color: $basic-green;
+      }
     }
   }
 
   &--current-form {
     @media (min-width: $tablet-width) {
-      text-underline-offset: 6px;
+      &::after {
+        bottom: 4px;
+      }
     }
 
     @media (min-width: $desktop-width) {
-      text-underline-offset: 8px;
+      &::after {
+        background-color: $basic-green;
+        bottom: 3px;
+      }
     }
   }
 }

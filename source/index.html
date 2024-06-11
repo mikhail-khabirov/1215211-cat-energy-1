@@ -39,7 +39,7 @@
               srcset="./img/logo-pic-desktop.svg"
             />
             <source
-              media="((min-width: 768px))"
+              media="(min-width: 768px)"
               srcset="./img/logo-pic-tablet.svg"
             />
             <img
@@ -76,16 +76,16 @@
               >
             </li>
           </ul>
+          <button
+            class="site-navigation__button"
+            type="button"
+            aria-label="Открыть меню навинации"
+          >
+            <span class="site-navigation__button-line"></span>
+            <span class="site-navigation__button-line"></span>
+            <span class="site-navigation__button-line"></span>
+          </button>
         </nav>
-        <button
-          class="site-navigation__button"
-          type="button"
-          aria-label="Открыть меню навинации"
-        >
-          <span class="site-navigation__button-line"></span>
-          <span class="site-navigation__button-line"></span>
-          <span class="site-navigation__button-line"></span>
-        </button>
       </div>
     </header>
 
@@ -103,7 +103,6 @@
             <source
               media="(min-width: 1440px)"
               srcset="
-
                 ./img/index-can-desktop@1x.webp 1x,
                 ./img/index-can-desktop@2x.webp 2x
               "
@@ -125,7 +124,6 @@
             <source
               media="(min-width: 1440px)"
               srcset="
-
                 ./img/index-can-desktop@1x.png 1x,
                 ./img/index-can-desktop@2x.png 2x
               "
@@ -223,58 +221,140 @@
       </section>
 
       <section class="example">
-        <div class="example__container container">
-          <h2 class="example__title title">Живой пример</h2>
-          <p class="example__case">
-            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без&nbsp;изнуряющих тренировок! При этом он не менял&nbsp;своих привычек ипо-прежнему спит по 16 часов в день.
-          </p>
-          <div class="example__statistics">
-            <dl class="example__desc">
-              <div class="example__desc-item">
-                <dt class="example__desc-term">5 КГ</dt>
-                <dd class="example__desc-meaning">снижение веса</dd>
-              </div>
-              <div class="example__desc-item">
-                <dt class="example__desc-term">60 ДНЕЙ</dt>
-                <dd class="example__desc-meaning">затрачено времени</dd>
-              </div>
-            </dl>
-            <p class="example__spendings">
-              Затраты на питание:
-              <span class="example__price">15 000 РУБ.</span>
+        <div class="example__block">
+          <div class="example__container container">
+            <h2 class="example__title title">Живой пример</h2>
+            <p class="example__case">
+              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм
+              на Cat Energy Slim. Отличный результат без&nbsp;изнуряющих
+              тренировок! При этом он не менял&nbsp;своих привычек ипо-прежнему
+              спит по 16 часов в день.
             </p>
+            <div class="example__statistics">
+              <dl class="example__desc">
+                <div class="example__desc-item">
+                  <dt class="example__desc-term">5 КГ</dt>
+                  <dd class="example__desc-meaning">снижение веса</dd>
+                </div>
+                <div class="example__desc-item">
+                  <dt class="example__desc-term">60 ДНЕЙ</dt>
+                  <dd class="example__desc-meaning">затрачено времени</dd>
+                </div>
+              </dl>
+              <p class="example__spendings">
+                Затраты на питание:
+                <span class="example__price">15 000 РУБ.</span>
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="example__wrapper">
-          <div class="example__picture-wrapper">
-            <div class="example__image example__image--before"></div>
-            <div class="example__image example__image--after"></div>
-            <button class="example__toggle-button" type="button">
-              <svg
-                class="example__toggle-icon"
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-                focusable="false"
-              >
-                <rect x="1" y="1" width="38" height="38" rx="19" fill="white" />
-                <rect
-                  x="1"
-                  y="1"
-                  width="38"
-                  height="38"
-                  rx="19"
-                  stroke="#666666"
-                  stroke-width="2"
+          <div class="example__wrapper">
+            <div class="example__picture-wrapper">
+              <picture>
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./img/cat-before-tablet.webp    1x,
+                    ./img/cat-before-tablet@2x.webp 2x
+                  "
                 />
-                <path d="M16 11L8 20L16 29V11Z" fill="#666666" />
-                <path d="M32 20L24 11V29L32 20Z" fill="#666666" />
-              </svg>
-              <span class="visually-hidden">Переключить изображение кота</span>
-            </button>
+                <source
+                  srcset="./img/cat-before.webp 1x, ./img/cat-before@2x.webp 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./img/cat-before-tablet.png    1x,
+                    ./img/cat-before-tablet@2x.png 2x
+                  "
+                />
+                <img
+                  class="example__image example__image--before"
+                  src="./img/cat-before.png"
+                  alt="Кот до похудения"
+                  srcset="./img/cat-before@2x.png 2x"
+                  width="140"
+                  height="256"
+                />
+              </picture>
+
+              <picture>
+                <source
+                  media="(min-width: 1440px)"
+                  srcset="
+                    ./img/cat-after-desktop.webp    1x,
+                    ./img/cat-after-desktop@2x.webp 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./img/cat-after-tablet.webp    1x,
+                    ./img/cat-after-tablet@2x.webp 2x
+                  "
+                />
+                <source
+                  srcset="./img/cat-after.webp 1x, ./img/cat-after@2x.webp 2x"
+                />
+                <source
+                  media="(min-width: 1440px)"
+                  srcset="
+                    ./img/cat-after-desktop.png    1x,
+                    ./img/cat-after-desktop@2x.png 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./img/cat-after-tablet.png    1x,
+                    ./img/cat-after-tablet@2x.png 2x
+                  "
+                />
+                <img
+                  class="example__image example__image--after"
+                  src="./img/cat-after.png"
+                  alt="Кот после похудения"
+                  srcset="./img/cat-after@2x.png 2x"
+                  width="140"
+                  height="256"
+                />
+              </picture>
+
+              <button class="example__toggle-button" type="button">
+                <svg
+                  class="example__toggle-icon"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <rect
+                    x="1"
+                    y="1"
+                    width="38"
+                    height="38"
+                    rx="19"
+                    fill="white"
+                  />
+                  <rect
+                    x="1"
+                    y="1"
+                    width="38"
+                    height="38"
+                    rx="19"
+                    stroke="#666666"
+                    stroke-width="2"
+                  />
+                  <path d="M16 11L8 20L16 29V11Z" fill="#666666" />
+                  <path d="M32 20L24 11V29L32 20Z" fill="#666666" />
+                </svg>
+                <span class="visually-hidden"
+                  >Переключить изображение кота</span
+                >
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -358,11 +438,11 @@
               <use xlink:href="./img/sprite.svg#logo-footer"></use></svg
           ></a>
           <ul class="copyright__socials socials">
-            <li class="social__item">
-              <a class="social__link" href="#">
+            <li class="socials__item">
+              <a class="socials__link" href="#">
                 <span class="visually-hidden">Перейти во Вконтакте</span>
                 <svg
-                  class="social__link-icon"
+                  class="socials__link-icon"
                   width="28"
                   height="22"
                   aria-hidden="true"
@@ -372,11 +452,11 @@
                 </svg>
               </a>
             </li>
-            <li class="social__item">
-              <a class="social__link" href="#"
+            <li class="socials__item">
+              <a class="socials__link" href="#"
                 ><span class="visually-hidden">Перейти во Ютуб</span>
                 <svg
-                  class="social__link-icon"
+                  class="socials__link-icon"
                   width="28"
                   height="22"
                   aria-hidden="true"
@@ -385,11 +465,11 @@
                   <use xlink:href="./img/sprite.svg#logo-youtube"></use></svg
               ></a>
             </li>
-            <li class="social__item">
-              <a class="social__link" href="#"
+            <li class="socials__item">
+              <a class="socials__link" href="#"
                 ><span class="visually-hidden">Перейти во Телеграм</span>
                 <svg
-                  class="social__link-icon"
+                  class="socials__link-icon"
                   width="28"
                   height="22"
                   aria-hidden="true"

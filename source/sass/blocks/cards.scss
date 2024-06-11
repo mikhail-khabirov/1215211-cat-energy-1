@@ -29,6 +29,10 @@
   &:nth-child(6) .cards__title,
   &:nth-child(7) .cards__title {
     margin-top: 3px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: -11px;
+    }
   }
 
   &:nth-child(2)::before,
@@ -140,6 +144,14 @@
 
 .cards__link {
   text-decoration: none;
+
+  &:focus:has(.cards__image) {
+    outline: none;
+  }
+
+  &:focus .cards__image {
+    outline: 1px solid $basic-black;
+  }
 }
 
 .cards__image {
@@ -150,15 +162,22 @@
   @media (min-width: $tablet-width) {
     width: 200px;
     height: 210px;
-    position: absolute;
-    top: -70px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: static;
+    transform: translate(0, -231px);
+    margin-bottom: -196px;
   }
 
   @media (min-width: $desktop-width) {
     width: 169px;
     height: 210px;
+    transform: translate(0, -223px);
+  }
+
+  &--correct-image {
+    @media (min-width: $desktop-width) {
+      width: 169px;
+      height: 204px;
+    }
   }
 }
 
@@ -174,7 +193,7 @@
 
   @media (min-width: $tablet-width) {
     width: 135px;
-    margin: 0 auto 20px;
+    margin: -14px auto 20px;
 
     font-size: 20px;
     line-height: 1.2;

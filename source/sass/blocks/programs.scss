@@ -48,6 +48,7 @@
   font-size: 24px;
   line-height: 1.54;
   text-transform: uppercase;
+  font-weight: 400;
 
   width: 220px;
   margin: 9px 0 29px 70px;
@@ -67,6 +68,7 @@
   @media (min-width: $desktop-width) {
     margin: 0 0 73px 162px;
     justify-content: space-between;
+    padding-right: 60px;
 
     &--cat-sit {
       width: 326px;
@@ -192,7 +194,12 @@
   color: #000000;
   transition: opacity 0.3s ease;
 
-  width: 134px;
+  display: inline-block;
+  width: 150px;
+
+  &:hover::after {
+    width: 40px;
+  }
 
   &:active {
     opacity: 0.3;
@@ -205,12 +212,12 @@
     height: 12px;
     margin-left: 16px;
     background-image: url("../img/catalog-arrow.svg");
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-position: center;
+    transition: width 0.3s ease;
 
     @media (min-width: $tablet-width) {
-      height: 15px;
+      margin-bottom: 2px;
       margin-left: 26px;
     }
   }
@@ -218,10 +225,10 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 1.2;
-    width: 165px;
+    width: 180px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 168px;
+    width: 190px;
   }
 }

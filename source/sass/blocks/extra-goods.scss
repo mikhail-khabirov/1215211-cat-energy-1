@@ -17,6 +17,13 @@
   overflow: hidden;
 }
 
+.extra-goods__wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .extra-goods__title {
   position: relative;
   margin: 0 0 36px;
@@ -178,7 +185,7 @@
     }
 
     &:nth-child(4) .extra-goods__description {
-      width: 278px;
+      width: 282px;
     }
 
     &:nth-child(4) .extra-goods__item-title {
@@ -234,6 +241,7 @@
 
 .extra-goods__term {
   line-height: 1.43;
+  color: $special-dark-grey;
 }
 
 .extra-goods__term,
@@ -275,7 +283,7 @@
       url("../img/cat-background-catalog@2x.jpg") 2x,
       url("../img/cat-background-catalog.jpg") 1x
     );
-    /* stylelint-enable */
+  /* stylelint-enable */
   background-repeat: no-repeat;
   background-size: cover, cover;
   background-color: rgba(104, 183, 56, 0.85);
