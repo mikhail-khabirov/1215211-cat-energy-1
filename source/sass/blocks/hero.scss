@@ -83,6 +83,7 @@
 }
 
 .hero__text-wrapper {
+  margin-top: -2px;
   width: 100vw;
   background-image: url("../img/cat-background.jpg");
   /* stylelint-disable */
@@ -103,6 +104,7 @@
   background-color: fade-out($basic-green, 0.15);
 
   @media (min-width: $tablet-width) {
+    margin: 0;
     background-color: transparent;
     background-image: none;
   }
