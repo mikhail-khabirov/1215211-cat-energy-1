@@ -320,8 +320,9 @@
 
     @media (min-width: $desktop-width) {
       top: 20px;
-      width: 70px;
-      left: -110px;
+      width: 100vw;
+      left: -100vw;
+      margin-left: -41px;
     }
   }
 }
@@ -372,8 +373,9 @@
     }
 
     @media (min-width: $desktop-width) {
-      width: 70px;
-      left: -110px;
+      width: 100vw;
+      left: -100vw;
+      margin-left: -41px;
     }
   }
 }
@@ -419,8 +421,9 @@
     }
 
     @media (min-width: $desktop-width) {
-      width: 70px;
-      left: -110px;
+      width: 100vw;
+      left: -100vw;
+      margin-left: -41px;
     }
   }
 }

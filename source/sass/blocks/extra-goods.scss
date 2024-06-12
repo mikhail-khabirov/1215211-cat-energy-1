@@ -15,6 +15,10 @@
 .extra-goods__container {
   position: relative;
   overflow: hidden;
+
+  @media (min-width: $desktop-width) {
+    overflow: unset;
+  }
 }
 
 .extra-goods__wrapper {
@@ -57,8 +61,9 @@
     }
 
     @media (min-width: $desktop-width) {
-      left: -149px;
-      width: 109px;
+      left: -100vw;
+      width: 100vw;
+      margin-left: -41px;
       top: 23px;
     }
   }
